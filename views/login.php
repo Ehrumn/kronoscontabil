@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" >
     Login:<br><br>
     <input type="email" name="email" placeholder="Digite seu e-mail" required/><br><br><br>
     Senha:<br><br>
