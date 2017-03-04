@@ -49,6 +49,27 @@
     margin-top: 10%;
     padding: 10px;
 }
-.botoes-sisadm{
-    
+
+/* Style do sisadm @author Fernando Oliveira - fer.oliveira88@gmail.com - 04/03/2017*/
+.conteudo_all_sisadm{
+    float: left;
+    width: 100%;
 }
+.medlle-um-sisadm{
+    float: left;
+    width: 100%;
+}
+.medlle-dois-sisadm{
+    float: left;
+    width: 100%;
+}
+.menu-cadastros{
+    float: left;
+    width: 25%;
+    height: 40%;
+}
+.conteudo-25-sisadm{
+    float: left;
+    width: 25%;
+}
+/* Fim style sisadm */
