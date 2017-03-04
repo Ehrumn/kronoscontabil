@@ -1,13 +1,15 @@
 <div class="conteudo">
     <div class="bemvindo">Olá <?php //$_SESSION['nome']; ?>, deixe os dados do sistema sempre atualizados.</div>
     <div class="menu-cadastros">
-        <div class="botoes-sisadm">
-            <h3>Menu de Cadastros</h3>
-            <a href="#"><div>Botão 1</div></a>
-            <a href="#"><div>Botão 2</div></a>
-            <a href="#"><div>Botão 3</div></a>
-            <a href="#"><div>Botão 4</div></a>
-            <a href="#"><div>Botão 5</div></a>
+        <h3>Menu de Cadastros</h3>
+        <div class="dropdown">
+            <ul class="dropdown-menu" role="menu" aria-labelleby="dLabel">
+                <li><a href="#">Botão</a></li>
+                <li><a href="#">Botão</a></li>
+                <li><a href="#">Botão</a></li>
+                <li><a href="#">Botão</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="#"></a></li>
         </div>       
     </div>
 </div>  
