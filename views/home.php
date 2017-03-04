@@ -38,21 +38,17 @@
                 <div class="mid-rig-top"><h2>Links Úteis:</h2></div>
                 <div class="mid-rig-links">
                     <?php
-                    try {
-                        $links = new Link();
-                        $categorias = $links->getCategoria();
+                    $links = new Home();
+                    $categorias = $links->getCategoria();
 
-                        foreach ($links->getCategoria() as $categoria) {
+                    foreach ($links->getCategoria() as $categoria) {
 
-                            echo "<div class='btn-tit'><strong>" . $categoria . "</strong></div>";
+                        echo "<div class='btn-tit'><strong>" . $categoria['tipo'] . "</strong></div>";
 
-                            foreach ( $links->getLinks($categoria) as $key) {
-                                //echo '<div class="btn-links">';
-                                echo '<a href=' . $key['link'] . '><div class="btn-links">' . $key['descricao'] . '</div></a>';
-                            }
+                        foreach ($links->getLinks($categoria['tipo']) as $key) {
+                            //echo '<div class="btn-links">';
+                            echo '<a href=' . $key['link'] . '><div class="btn-links">' . $key['descricao'] . '</div></a>';
                         }
-                    } catch (PDOException $e) {
-                        echo "falhou" . $e->getMessage();
                     }
                     ?><br><br>
                 </div>

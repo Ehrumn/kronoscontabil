@@ -1,6 +1,6 @@
 <?php
 
-class home extends model {
+class Home extends model {
 
     public function getCategoria() {
         $array = array();
