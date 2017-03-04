@@ -39,24 +39,16 @@
                 <div class="mid-rig-links">
                     <?php
                     try {
-                        $sqll = "SELECT tipo FROM tb_links_uteis GROUP BY tipo ORDER BY tipo";
-                        $sqll = $pdo->query($sqll);
-                        foreach ($sqll->fetchAll() as $value) {
+                        $links = new Link();
+                        $categorias = $links->getCategoria();
 
-                            $tipo = $value['tipo']; //variavel tipo
+                        foreach ($links->getCategoria() as $categoria) {
 
-                            echo "<div class='btn-tit'><strong>" . $tipo . "</strong></div>";
+                            echo "<div class='btn-tit'><strong>" . $categoria . "</strong></div>";
 
-                            $sql = "SELECT * FROM tb_links_uteis WHERE ativo = 'S' and tipo = '$tipo'";
-                            $sql = $pdo->query($sql);
-
-                            if ($sql->rowCount() > 0) {
-                                foreach ($sql->fetchAll() as $key) {
-                                    //echo '<div class="btn-links">';
-                                    echo '<a href=' . $key['link'] . '><div class="btn-links">' . $key['descricao'] . '</div></a>';
-                                }
-                            } else {
-                                echo "Não hà links disponiveis";
+                            foreach ( $links->getLinks($categoria) as $key) {
+                                //echo '<div class="btn-links">';
+                                echo '<a href=' . $key['link'] . '><div class="btn-links">' . $key['descricao'] . '</div></a>';
                             }
                         }
                     } catch (PDOException $e) {

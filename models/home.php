@@ -1,8 +1,29 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+class home extends model {
 
+    public function getCategoria() {
+        $array = array();
+        $sql = "SELECT tipo FROM tb_links_uteis GROUP BY tipo ORDER BY tipo";
+        $sql = $this->db->query($sql);
+        
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+        
+        return $array;
+    }
+
+    public function getLinks($category) {
+        $array = array();
+        
+        $sql = "SELECT * FROM tb_links_uteis WHERE ativo = 'S' and tipo = '$category'";
+        $sql = $this->db->query($sql);
+        
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+        return $array;
+    }
+
+}
