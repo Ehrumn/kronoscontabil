@@ -43,7 +43,7 @@
 
                         echo "<div class='btn-tit'><strong>" . $categoria['tipo'] . "</strong></div>";
 
-                        foreach ($links->getLinks($categoria) as $key) {
+                        foreach ($links->getLinks($categoria['tipo']) as $key) {
                             //echo '<div class="btn-links">';
                             echo '<a href=' . $key['link'] . '><div class="btn-links">' . $key['descricao'] . '</div></a>';
                         }

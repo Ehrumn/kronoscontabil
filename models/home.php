@@ -15,15 +15,15 @@ class Home extends model {
     }
 
     public function getLinks($category) {
-        $array = array();
+        $arrays = array();
         
         $sql = "SELECT * FROM tb_links_uteis WHERE ativo = 'S' and tipo = '$category'";
         $sql = $this->db->query($sql);
         
         if($sql->rowCount() > 0){
-            $array = $sql->fetchAll();
+            $arrays = $sql->fetchAll();
         }
-        return $array;
+        return $arrays;
     }
 
 }

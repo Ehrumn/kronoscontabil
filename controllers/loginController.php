@@ -8,7 +8,6 @@ class loginController extends controller {
     public function index() {
         $dados = array();
         
-        $login = new Login();
         
         $this->loadTemplate('login', $dados);
     }
