@@ -39,12 +39,11 @@
                 <div class="mid-rig-links">
                     <?php
                     try {
-                        $links = new Link();
-                        $categorias = $links->getCategoria();
+                        $links = new Home();
 
                         foreach ($links->getCategoria() as $categoria) {
 
-                            echo "<div class='btn-tit'><strong>" . $categoria . "</strong></div>";
+                            echo "<div class='btn-tit'><strong>" . $categoria['tipo'] . "</strong></div>";
 
                             foreach ( $links->getLinks($categoria) as $key) {
                                 //echo '<div class="btn-links">';
