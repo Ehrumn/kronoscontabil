@@ -8,7 +8,6 @@
             <input type="password" name="pass" placeholder="Digite sua senha" required/><br><br><br>
 
             <input type="submit" value="LOGIN">
-        </form>
-           
+        </form>    
     </center>
 </div>
