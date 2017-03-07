@@ -42,14 +42,15 @@
     height: 5%;
     width: 100%;
 }
-.login{
+.login-ctn{
     border: 2px #8b8b8b solid;
-    border-radius: 20px;
-    width: 15%;
+    border-radius: 25px;
+    width: 20%;
     background-color: #d1d1d1; 
     margin-top: 10%;
     padding: 10px;
 }
+
 
 /* Style do sisadm @author Fernando Oliveira - fer.oliveira88@gmail.com - 04/03/2017*/
 .conteudo_all_sisadm{
