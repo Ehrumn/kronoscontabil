@@ -36,6 +36,8 @@
 }
 
 .mid{
+    margin: 0 auto;
+    padding-top: 10px;
     height: 75%;
     width: 100%;
 }

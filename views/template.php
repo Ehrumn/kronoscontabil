@@ -10,7 +10,7 @@
 
     </head>
     <body class="master-all">
-        <div class="countainer">
+        <div class="container-fluid">
             <img class="back-img" src="assets/images/icone_1000x1000.png">
             <div class="all">
                 <div class="top">
@@ -24,11 +24,21 @@
                                 Cadastro<span class="caret"></span>                  
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li><a href="#">Sócios</a></li>
+                                <li><a href="#">Clientes</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">links Úteis</a></li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Razão<span class="caret"></span>                  
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Sócios</a></li>
+                                <li><a href="#">Clientes</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">links Úteis</a></li>
                             </ul>
                         </div>
                     </div>

@@ -13,9 +13,10 @@
                     </div>
                     <div class="input-group">
                         <input type="password" class="form-control" 
-                               aria-describedby="basic-addon2" name="pass" placeholder="Digite sua senha" required/>
+                               aria-describedby="basic-addon2" name="pass" 
+                               placeholder="Digite sua senha" required/>
                     </div>
-                    <a href="#">Esqueceu a senha?</a>
+                    <a class="text-left" href="#">Esqueceu a senha?</a>
                     <br><br>
                     <button type="submit" class="btn btn-lg btn-primary">Entrar</button>
                 </form> 
