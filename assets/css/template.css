@@ -45,9 +45,12 @@
 }
 
 .login-frm{
-    margin: 8% auto;
+    margin: 5% auto;
     width: 30%;
     padding: 10px;    
+}
+#panel-login{
+    background-color: #dcdcdc;
 }
 
 /* Style do sisadm @author Fernando Oliveira - fer.oliveira88@gmail.com - 04/03/2017*/
