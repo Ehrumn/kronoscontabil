@@ -1,13 +1,15 @@
 <div class="login-frm" >
     <center>
-        <div class="panel panel-primary"><div>
-                <h2 class="panel-title">Faça o seu Login</h2>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class='panel-title'>Faça seu login</h2>
+            </div>
+            <div class="panel-body">
                 <form method="POST" class="login">
                     <div class="input-group">
-                        <input type="text" class="form-control" style=" width: 300px;"
+                        <input type="text" class="form-control" 
                                placeholder="Digite seu Email" 
                                aria-describedby="basic-addon2" required>
-                        <span class="input-group-addon" id="basic-addon2">@exemplo.com</span>
                     </div>
                     <div class="input-group">
                         <input type="password" class="form-control" 
@@ -16,7 +18,8 @@
                     <br>
                     <button class="btn btn-lg btn-primary">Entrar</button>
                     <!--input type="submit" value="LOGIN"-->
-                </form>  
+                </form> 
             </div>
+        </div>
     </center>
 </div>

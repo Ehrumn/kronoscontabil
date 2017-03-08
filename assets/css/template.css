@@ -32,6 +32,7 @@
 .top-menu{
     width: 100%;
     height: 30%;
+    z-index: -1;
 }
 
 .mid{
@@ -44,18 +45,10 @@
 }
 
 .login-frm{
-    margin: 100px auto;
-    border: 2px #8b8b8b solid;
-    border-radius: 25px;
+    margin: 8% auto;
     width: 30%;
-    background-color: #d1d1d1; 
-    padding: 10px;
-    align-content: flex-start;
+    padding: 10px;    
 }
-.login-frm input{
-    width: 50%;
-}
-
 
 /* Style do sisadm @author Fernando Oliveira - fer.oliveira88@gmail.com - 04/03/2017*/
 .conteudo_all_sisadm{
