@@ -11,42 +11,30 @@
     </head>
     <body class="master-all">
         <div class="container-fluid">
-            <img class="back-img" src="assets/images/icone_1000x1000.png">
-            <div class="all">
-                <div class="top">
-                    <div class="top-top">
-                        <div class="top-top-logo"></div>
-                        <div class="top-top-logged"></div>
+            <img src="assets/images/icone_1000x1000.png" class="back-img">
+            <div class="top">
+                <div class="row">
+                    <div class="form-group col-md-3">
+                        <img src="assets/images/logo_1000x258.png" class="img-responsive"> 
                     </div>
-                    <div class="top-menu">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Cadastro<span class="caret"></span>                  
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Sócios</a></li>
-                                <li><a href="#">Clientes</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">links Úteis</a></li>
-                            </ul>
-                        </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Razão<span class="caret"></span>                  
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Sócios</a></li>
-                                <li><a href="#">Clientes</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">links Úteis</a></li>
-                            </ul>
-                        </div>
+                    
+                    <div class="form-group col-md-7">
+                    </div>
+                    
+                    <div class="form-group col-md-2">
+                        <button class="btn btn-primary btn-sm" style="margin: 10px auto;">Logout</button> 
                     </div>
                 </div>
-                <div class="mid">
-                    <?php $this->loadViewInTemplate($viewName, $viewData); ?>
+            </div>
+            <div clas="mid">
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <h3 class="text-center bg-primary">Menus</h3>
+                    </div>
+                    <div class="form-group col-md-10">
+                       <?php $this->loadViewInTemplate($viewName, $viewData); ?>
+                    </div>
                 </div>
-                <footer class="botton"></footer>
             </div>
         </div>
     </body>

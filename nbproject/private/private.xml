@@ -4,7 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp/www/kronoscontabil/views/template.php</file>
+            <file>file:/C:/wamp/www/kronoscontabil/controllers/cadClienteController.php</file>
             <file>file:/C:/wamp/www/kronoscontabil/assets/css/template.css</file>
+            <file>file:/C:/wamp/www/kronoscontabil/models/cadCliente.php</file>
+            <file>file:/C:/wamp/www/kronoscontabil/views/cadCliente.php</file>
         </group>
     </open-files>
 </project-private>
