@@ -159,7 +159,7 @@ a, a:visited, a:hover, a:active{
 .powered{
     font-size:70%; 
     color:#424242;
-    float: right;
+    float: right; 
     padding-top: 65px;
     margin-right: 10px;
     z-index: 4;
