@@ -2,11 +2,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>KRONOS</title>
-        <link href="assets/css/style.css" rel="stylesheet"/>
-        <!--link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/bootstrap.min.js"></script-->
-        <link type="text/css" rel="stylesheet" href="assets/css/template.css"/>
+        <link href="assets/css/style.css" rel="stylesheet"/>        
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
