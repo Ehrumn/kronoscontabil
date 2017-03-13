@@ -4,12 +4,9 @@
         <div class="menu-cadastros">
             <div class="btn-group btn-group-vertical iconInput">
                 <h4>Menu de Cadastros</h4>
-                <a href="clientes" style="text-decoration: none;"><button class="btn" ><i class="glyphicon glyphicon-floppy-disk"></i>Clientes</button></a>
-                <button class="btn">Cadastro</button>
-                <button class="btn">Cadastro</button>
-                <button class="btn">Cadastro</button>
-                <button class="btn">Cadastro</button>
-                <button class="btn">Cadastro</button>
+                <div class="btn-sisadm"><a href="cadCliente"><button class="btn" style="width: 155px;"><i class="glyphicon glyphicon-user"></i> Cliente</button></a></div>
+                <div class="btn-sisadm"><a href="cadUsuario"><button class="btn" style="width: 155px;"><i class="glyphicon glyphicon-user"></i> Usuario</button></a></div>
+                <div class="btn-sisadm"><a href="cadCliente"><button class="btn" style="width: 155px;"><i class="glyphicon glyphicon-user"></i> Cliente</button></a></div>
             </div>   
         </div>
         <div class="conteudo-25-sisadm">Conteudo 2</div>
