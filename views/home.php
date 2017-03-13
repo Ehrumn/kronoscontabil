@@ -3,9 +3,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>KRONOS</title>
         <link href="assets/css/style.css" rel="stylesheet"/>
-        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <!--link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script-->
+        <link type="text/css" rel="stylesheet" href="assets/css/template.css"/>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     </head>
 
     <body>
@@ -19,16 +23,7 @@
                         <img class="img-logo" src="assets/images/logo_1000x258.png" height="120px">
                     </div>
                     <div class="cab-login">
-                        <form method="POST">
-                            <table>
-                                <tr>
-                                    <td><input class="inp-email" type="email" name="email" placeholder="Digite seu e-mail" required></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="inp-pass" type="password" name="passwd" placeholder="Digite sua senha" required>
-                                        <input class="inp_subm" type="button" value="OK" onclick="alert('Esta área está em construção!')"></td>
-                                </tr>
-                            </table>   
+                        <a href="login"><button class="btn btn-primary btn-sm">Acessar Sistema</button></a>
                         </form>
                     </div>
                 </div>
