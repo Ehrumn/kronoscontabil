@@ -23,6 +23,7 @@ class loginController extends controller {
                 $_SESSION['usrName'] = $value['nome'];
                 $_SESSION['usrEmail'] = $value['email'];
             }
+            echo "<script>window.location.href='/kronoscontabil/sisadm'</script>";
         }else{
             echo "<script>window.location.href='/kronoscontabil/login'</script>";
         }
