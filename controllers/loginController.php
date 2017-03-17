@@ -28,6 +28,10 @@ class loginController extends controller {
             echo "<script>window.location.href='/kronoscontabil/login'</script>";
         }
     }
+    public function logoff() {
+        session_destroy()/
+        header("Location: ../");
+    }
 
 }
 

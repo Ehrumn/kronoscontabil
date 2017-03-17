@@ -22,7 +22,7 @@
                     </div>
                     
                     <div class="form-group col-md-2">
-                        <button class="btn btn-primary btn-sm" style="margin: 10px auto;">Logout</button> 
+                        <button  class="btn btn-primary btn-sm" style="margin: 10px auto;"><a href="/kronoscontabil/login/logoff" style="text-decoration: none; color:#FFF;">Logout</a></button> 
                     </div>
                 </div>
             </div>
