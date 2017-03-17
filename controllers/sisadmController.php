@@ -14,8 +14,12 @@ class sisadmController extends controller {
     public function index() {
         $dados = array();
         
+        if(isset($_SESSION['usrName']) && !empty($_SESSION['usrName'])){
+            $this->loadTemplate('sisadm', $dados);
+        }else{
+            echo "<script>window.location.href='/login';</script>";
+        }
         
-        $this->loadTemplate('sisadm', $dados);
     }
 }
 ?>
