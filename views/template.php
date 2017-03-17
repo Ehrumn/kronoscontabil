@@ -17,13 +17,19 @@
                     <div class="form-group col-md-3">
                         <img src="assets/images/logo_1000x258.png" class="img-responsive"> 
                     </div>
-                    
+
                     <div class="form-group col-md-3">
                     </div>
                     <div class="form-group col-md-4" style='text-align: right; margin-top: 5px'>
-                        <h4>Seja bem vindo: <?php echo $_SESSION['usrName']?></h4>
+                        <?php
+                        if (isset($_SESSION['usrName']) && !empty($_SESSION['usrName'])){
+                           echo "<h4 class='text-primary'>Seja bem vindo: ";
+                           echo $_SESSION['usrName'];
+                           echo "</h4>";
+                        }                            
+                        ?>
                     </div>
-                    
+
                     <div class="form-group col-md-2">
                         <button class="btn btn-primary btn-sm" style="margin: 10px auto;">Logout</button> 
                     </div>
@@ -32,7 +38,7 @@
             <div clas="mid">
                 <div class="row">
                     <div class="form-group col-md-12">
-                       <?php $this->loadViewInTemplate($viewName, $viewData); ?>
+<?php $this->loadViewInTemplate($viewName, $viewData); ?>
                     </div>
                 </div>
             </div>
