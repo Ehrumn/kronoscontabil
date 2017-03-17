@@ -5,10 +5,10 @@
                 <h1 class='panel-title'><strong>ENTRE COM SUA CONTA</strong></h1>
             </div>
             <div class="panel-body" id="panel-login">
-                <form method="POST" class="login">
+                <form method="POST" class="login" action="/kronoscontabil/login/logar">
                     <div class="input-group">
                         <input type="email" class="form-control" 
-                               placeholder="Digite seu Email" 
+                               placeholder="Digite seu Email" name="email"
                                aria-describedby="basic-addon2" required>
                     </div>
                     <div class="input-group">
@@ -18,7 +18,7 @@
                     </div>
                     <a class="text-left" href="#">Esqueceu a senha?</a>
                     <br><br>
-                    <button type="submit" class="btn btn-lg btn-primary">Entrar</button>
+                    <input type="submit" class="btn btn-lg btn-primary" value="ENTRAR"> 
                 </form> 
             </div>
         </div>

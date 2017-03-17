@@ -11,6 +11,23 @@ class loginController extends controller {
         $this->loadTemplate('login', $dados);
     }
 
+    public function logar() {
+        $dados = array();
+        $email = addslashes($_POST['email']);
+        $senha = md5(addslashes($_POST['pass']));
+
+        $l = new Login();
+        $valid = $l->validaLogin($email, $senha);
+        if ($valid == 'S') {
+            foreach ($l->usrLogin($email, $senha) as $value) {
+                $_SESSION['usrName'] = $value['nome'];
+                $_SESSION['usrEmail'] = $value['email'];
+            }
+        }else{
+            echo "<script>window.location.href='/kronoscontabil/login'</script>";
+        }
+    }
+
 }
 
 ?>
