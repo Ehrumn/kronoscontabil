@@ -8,24 +8,29 @@ class Login extends model {
         $sql = $this->db->query($sql);
 
         $totRec = $sql->fetchColumn();
-        
+
         if ($totRec == 0) {
             $valid = 'N';
-            
+
             $this->loginError($email);
         } else {
             $valid = 'S';
+            
+            if($this->validaBloqueio($email) == 'S'){
+                $valid = 'N';
+                echo "<script>alert('Sua senha foi bloqueada!')</script>";
+            }
         }
         return $valid;
     }
 
     public function usrLogin($email, $senha) {
         $array = array();
-        
+
         $sql = "SELECT nome, email FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-        
+
         $sql = $this->db->query($sql);
-        
+
         if ($sql->rowCount() > 0) {
             $array = $sql->fetchAll();
         }
@@ -46,7 +51,7 @@ class Login extends model {
                 $trocasenha = $value['trocar_senha'];
             }
 
-            if($trocasenha != 'S') {
+            if ($trocasenha != 'S') {
                 if ($erros < 3) {
                     $sql = "UPDATE usuarios SET qtd_erros = qtd_erros + 1 WHERE email = '$email'";
                     $this->db->query($sql);
@@ -54,10 +59,19 @@ class Login extends model {
                     $sql = "UPDATE usuarios SET qtd_erros = qtd_erros + 1, trocar_senha = 'S' WHERE email = '$email'";
                     $this->db->query($sql);
                 }
-            }else{
+            } else {
                 echo "<script>alert('Sua senha foi bloqueada!')</script>";
             }
         }
+    }
+
+    public function validaBloqueio($email) {
+        $sql = "SELECT trocar_senha FROM usuarios WHERE email = '$email'";
+        $sql = $this->db->query($sql);
+        
+        $trocasenha = $sql->fetchColumn();
+        
+        return $trocasenha;
     }
 
 }

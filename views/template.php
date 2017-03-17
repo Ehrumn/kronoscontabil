@@ -20,17 +20,17 @@
 
                     <div class="form-group col-md-3">
                     </div>
-                    <div class="form-group col-md-4" style='text-align: right; margin-top: 5px'>
+                    <div class="form-group col-md-4" style='margin-top: 5px'>
                         <?php
                         if (isset($_SESSION['usrName']) && !empty($_SESSION['usrName'])){
-                           echo "<h4 class='text-primary'>Seja bem vindo: ";
-                           echo $_SESSION['usrName'];
-                           echo "</h4>";
+                           echo "<h5 class='text-primary text-right'>Seja bem vindo: ";
+                          echo $_SESSION['usrName'];
+                           echo "</h5>";
                         }                            
                         ?>
                     </div>
 
-                    <div class="form-group col-md-2">
+                    <div class="form-group col-md-2 ">
                         <button  class="btn btn-primary btn-sm" style="margin: 10px auto;"><a href="/kronoscontabil/login/logoff" style="text-decoration: none; color:#FFF;">Logout</a></button> 
                     </div>
                 </div>
