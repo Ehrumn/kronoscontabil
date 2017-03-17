@@ -18,7 +18,10 @@
                         <img src="assets/images/logo_1000x258.png" class="img-responsive"> 
                     </div>
                     
-                    <div class="form-group col-md-7">
+                    <div class="form-group col-md-3">
+                    </div>
+                    <div class="form-group col-md-4" style='text-align: right; margin-top: 5px'>
+                        <h4>Seja bem vindo: <?php echo $_SESSION['usrName']?></h4>
                     </div>
                     
                     <div class="form-group col-md-2">
@@ -28,10 +31,7 @@
             </div>
             <div clas="mid">
                 <div class="row">
-                    <div class="form-group col-md-2">
-                        <h3 class="text-center bg-primary">Menus</h3>
-                    </div>
-                    <div class="form-group col-md-10">
+                    <div class="form-group col-md-12">
                        <?php $this->loadViewInTemplate($viewName, $viewData); ?>
                     </div>
                 </div>
