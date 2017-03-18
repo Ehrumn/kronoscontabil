@@ -73,5 +73,20 @@ class Login extends model {
         
         return $trocasenha;
     }
+    
+    public function validaEmail($email) {
+        $sql = "SELECT email FROM usuarios WHERE email ='$email' ";
+        $sql = $this->db->query($sql);
+        if ($sql->rowCount() > 0) {
+            $valid = "S";
+        } else {
+            $valid = "N";
+        }
+        return $valid;
+    }
+
+    public function recSenha() {
+        
+    }
 
 }
