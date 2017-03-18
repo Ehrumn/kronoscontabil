@@ -22,8 +22,13 @@ class loginController extends controller {
             foreach ($l->usrLogin($email, $senha) as $value) {
                 $_SESSION['usrName'] = $value['nome'];
                 $_SESSION['usrEmail'] = $value['email'];
+                $_SESSION['usrTipo'] = $value['tipo'];
+                if ($value['tipo'] == 'ADMIN') {
+                    echo "<script>window.location.href='/kronoscontabil/sisadm'</script>";
+                }else{
+                    echo "<script>window.location.href='/kronoscontabil/contacliente'</script>";
+                }
             }
-            echo "<script>window.location.href='/kronoscontabil/sisadm'</script>";
         } else {
             echo "<script>window.location.href='/kronoscontabil/login'</script>";
         }
@@ -57,7 +62,7 @@ class loginController extends controller {
     public function enviarEmail($email) {
         $login = new Login();
         $novasenha = $login->recSenha($email);
-        
+
         $assunto = "Nova senha Sistema Kronos Contabil";
 
         $corpo = "Nome: Cliente Sistema Kronos \r\n" . "Email: " . $email . "\r\n" . "Nova Senha: " . $novasenha;
