@@ -57,12 +57,14 @@ class loginController extends controller {
     public function enviarEmail($email) {
         $login = new Login();
         $novasenha = $login->recSenha($email);
+        
+        $assunto = "Nova senha Sistema Kronos Contabil";
 
         $corpo = "Nome: Cliente Sistema Kronos \r\n" . "Email: " . $email . "\r\n" . "Nova Senha: " . $novasenha;
 
         $email_headers = "From: suporte@kronoscontabil.com.br\r\n" . "Reply-To: $email" . "\r\n" . "Return-Path: suporte@kronoscontabil.com.br\r\n" . "X-Mailer: PHP/" . phpversion();
 
-        if (mail($email_destinatario, $assunto, $corpo, $email_headers)) {
+        if (mail($email, $assunto, $corpo, $email_headers)) {
             echo "<script>alert('Contato enviado!');</script>";
         } else {
             echo "<script>alert('Algo deu errado, tente novamente!');</script>";
