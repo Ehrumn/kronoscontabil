@@ -15,8 +15,8 @@ class Login extends model {
             $this->loginError($email);
         } else {
             $valid = 'S';
-            
-            if($this->validaBloqueio($email) == 'S'){
+
+            if ($this->validaBloqueio($email) == 'S') {
                 $valid = 'N';
                 echo "<script>alert('Sua senha foi bloqueada!')</script>";
             }
@@ -68,12 +68,12 @@ class Login extends model {
     public function validaBloqueio($email) {
         $sql = "SELECT trocar_senha FROM usuarios WHERE email = '$email'";
         $sql = $this->db->query($sql);
-        
+
         $trocasenha = $sql->fetchColumn();
-        
+
         return $trocasenha;
     }
-    
+
     public function validaEmail($email) {
         $sql = "SELECT email FROM usuarios WHERE email ='$email' ";
         $sql = $this->db->query($sql);
@@ -85,8 +85,11 @@ class Login extends model {
         return $valid;
     }
 
-    public function recSenha() {
-        
+    public function recSenha($email) {
+        $senha = rand(12345678, 98745632);
+        $sql = "UPDATE usuarios SET trocar_senha = 'N', qtd_erros = 0, senha = md5('$senha') WHERE email = '$email' ";
+        $this->db->query($sql);
+        return $senha;
     }
 
 }
