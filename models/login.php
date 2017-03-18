@@ -27,7 +27,7 @@ class Login extends model {
     public function usrLogin($email, $senha) {
         $array = array();
 
-        $sql = "SELECT nome, email FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+        $sql = "SELECT nome, email, tipo FROM usuarios WHERE email = '$email' AND senha = '$senha'";
 
         $sql = $this->db->query($sql);
 
