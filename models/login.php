@@ -11,7 +11,7 @@ class Login extends model {
 
         if ($totRec == 0) {
             $valid = 'N';
-
+            echo "<script>alert('Email e/ou senha incorretos!')</script>";
             $this->loginError($email);
         } else {
             $valid = 'S';
