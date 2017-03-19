@@ -1,5 +1,5 @@
 <?php
-class homeController extends controller {
+class cadUsuarioController extends controller {
 
     /*public function __construct() {
         parent::__construct();
@@ -8,8 +8,8 @@ class homeController extends controller {
     public function index() {
         $dados = array();
         
-        //$this->loadTemplate('home', $dados);
-        $this->loadView('home');
+        
+        $this->loadTemplate('cadUsuario', $dados);
     }
 
 }

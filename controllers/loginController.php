@@ -2,9 +2,9 @@
 
 class loginController extends controller {
 
-    public function __construct() {
+    /*public function __construct() {
         parent::__construct();
-    }
+    }*/
 
     public function index() {
         $dados = array();
@@ -24,13 +24,13 @@ class loginController extends controller {
                 $_SESSION['usrEmail'] = $value['email'];
                 $_SESSION['usrTipo'] = $value['tipo'];
                 if ($value['tipo'] == 'ADMIN') {
-                    echo "<script>window.location.href='/kronoscontabil/sisadm'</script>";
+                    echo "<script>window.location.href='/sisadm'</script>";
                 }else{
-                    echo "<script>window.location.href='/kronoscontabil/contacliente'</script>";
+                    echo "<script>window.location.href='/contacliente'</script>";
                 }
             }
         } else {
-            echo "<script>window.location.href='/kronoscontabil/login'</script>";
+            echo "<script>window.location.href='/login'</script>";
         }
     }
 
@@ -49,10 +49,10 @@ class loginController extends controller {
                 $this->enviarEmail($email);
 
                 echo "<script>alert('Nova senha enviado para seu email!')</script>";
-                echo "<script>window.location.href='/kronoscontabil/login'</script>";
+                echo "<script>window.location.href='/login'</script>";
             } else {
                 echo "<script>alert('Email Invalido!')</script>";
-                echo "<script>window.location.href='/kronoscontabil/login'</script>";
+                echo "<script>window.location.href='/login'</script>";
             }
         } else {
             echo "<script>alert('Digite seu email!')</script>";

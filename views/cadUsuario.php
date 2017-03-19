@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h3 class="text-center bg-primary">CADASTRO DE CLIENTES</h3>
+    <h3 class="text-center bg-primary">CADASTRO DE USUARIOS</h3>
     <form action="index.html">
         <!-- area de campos do form -->
         <div class="row">

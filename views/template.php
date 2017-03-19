@@ -17,7 +17,6 @@
                     <div class="form-group col-md-3">
                         <img src="assets/images/logo_1000x258.png" class="img-responsive"> 
                     </div>
-
                     <div class="form-group col-md-3">
                     </div>
                     <div class="form-group col-md-4" style='margin-top: 5px'>
@@ -26,12 +25,11 @@
                             echo "<h5 class='text-primary text-right'>Seja bem vindo: ";
                             echo $_SESSION['usrName'];
                             echo "</h5>";
-                        }
-                        ?>
-                    </div>
-
-                    <div class="form-group col-md-2 ">
-                        <button  class="btn btn-primary btn-sm" style="margin: 10px auto;"><a href="/kronoscontabil/login/logoff" style="text-decoration: none; color:#FFF;">Logout</a></button> 
+                            ?>
+                        </div>
+                        <div class="form-group col-md-2 ">
+                            <a href="/login/logoff" style="text-decoration: none; color:#FFF;"><button  class="btn btn-primary btn-sm" style="margin: 10px auto;">Logout</button></a> 
+                        <?php } ?> 
                     </div>
                 </div>
             </div>
