@@ -1,14 +1,21 @@
 <?php
 
 class loginController extends controller {
-
-    /*public function __construct() {
-        parent::__construct();
-    }*/
+    /* public function __construct() {
+      parent::__construct();
+      } */
 
     public function index() {
         $dados = array();
-        $this->loadTemplate('login', $dados);
+        if (isset($_SESSION['usrName']) && !empty($_SESSION['usrName'])) {
+            if ($_SESSION['usrTipo'] == 'ADMIN') {
+                echo "<script>window.location.href='/sisadm'</script>";
+            } else {
+                echo "<script>window.location.href='/contacliente'</script>";
+            }
+        } else {
+            $this->loadTemplate('login', $dados);
+        }
     }
 
     public function logar() {
@@ -25,7 +32,7 @@ class loginController extends controller {
                 $_SESSION['usrTipo'] = $value['tipo'];
                 if ($value['tipo'] == 'ADMIN') {
                     echo "<script>window.location.href='/sisadm'</script>";
-                }else{
+                } else {
                     echo "<script>window.location.href='/contacliente'</script>";
                 }
             }
