@@ -14,9 +14,10 @@ class Login extends model {
             echo "<script>alert('Email e/ou senha incorretos!')</script>";
             $this->loginError($email);
         } else {
-            $valid = 'S';
-
-            if ($this->validaBloqueio($email) == 'S') {
+            if ($this->validaBloqueio($email) == 'N') {
+                $this->zeraErro($email);
+                $valid = 'S';
+            } else {
                 $valid = 'N';
                 echo "<script>alert('Sua senha foi bloqueada!')</script>";
             }
@@ -28,13 +29,17 @@ class Login extends model {
         $array = array();
 
         $sql = "SELECT nome, email, tipo FROM usuarios WHERE email = '$email' AND senha = '$senha'";
-
         $sql = $this->db->query($sql);
 
         if ($sql->rowCount() > 0) {
             $array = $sql->fetchAll();
         }
         return $array;
+    }
+
+    public function zeraErro($email) {
+        $sql = "UPDATE usuarios SET qtd_erros = 0 WHERE email = '$email'";
+        $sql = $this->db->query($sql);
     }
 
     public function loginError($email) {
