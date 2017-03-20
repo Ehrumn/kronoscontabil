@@ -7,7 +7,6 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     </head>
-
     <body> 
         <div class="body_all">
             <div class="left-all">
