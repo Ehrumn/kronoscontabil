@@ -8,8 +8,6 @@
         <script type="text/javascript" src="assets/js/scripts.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        
-
     </head>
     <body class="master-all">
         <div class="container-fluid">

@@ -4,7 +4,7 @@
         <div class="menu-cadastros">
             <div class="btn-group btn-group-vertical iconInput">
                 <h4>Menu de Cadastros</h4>
-                <div class="btn-sisadm"><a href="cadCliente"><button class="btn" style="width: 155px;"><i class="glyphicon glyphicon-user"></i> Cliente</button></a></div>
+                <div class="btn-sisadm"><a href="clientes"><button class="btn" style="width: 155px;"><i class="glyphicon glyphicon-user"></i> Cliente</button></a></div>
                 <div class="btn-sisadm"><a href="cadUsuario"><button class="btn" style="width: 155px;"><i class="glyphicon glyphicon-user"></i> Usuario</button></a></div>
             </div>   
         </div>

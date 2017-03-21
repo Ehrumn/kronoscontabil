@@ -54,7 +54,7 @@
         <div id="actions" class="row">
             <div class="col-md-12 text-right">
                 <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="#" class="btn btn-danger">Cancelar</a>
+                <a href="/sisadm" class="btn btn-danger">Cancelar</a>
             </div>
         </div>
     </form>
