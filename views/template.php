@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link type="text/css" rel="stylesheet" href="assets/css/template.css"/>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        
+
     </head>
     <body class="master-all">
         <div class="container-fluid">
