@@ -7,11 +7,10 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     </head>
-
     <body> 
         <div class="body_all">
             <div class="left-all">
-                Left-All
+                <center><img src="/assets/img/fb.png" width="32px"></center>
             </div>
             <div class="meddle-all">
                 <div class="cabecalho"> 
@@ -49,13 +48,11 @@
                 </div>
             </div>
             <footer class="footer">
-
-                <div class="footer-left"><center>left</center></div>
-                <div class="footer-meddle"><center>meddle</center></div>
-                <div class="footer-right"><center>right</center></div>
-                <div class="powered">Powered by Bel. Rafael C. Dresch & Tecg.º Fernando Oliveira</div>
-
+                <div class="footer-left"><center><img  width="32px"></center></div>
+                <div class="footer-meddle"><center><a href="#"><img src="/assets/img/fb.png" width="32px;"></a></center></div>
+                <div class="footer-right"><center><img  width="32px"></center></div>
             </footer>
+            <div class="powered">Powered by Bel. Rafael C. Dresch & Tecg.º Fernando Oliveira.</div>
         </div>
     </body>
 </html>

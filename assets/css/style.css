@@ -136,22 +136,25 @@ a, a:visited, a:hover, a:active{
     float: left;
     width: 100%;
     height: 100px;
-    background-color: #b3b3b3;
-    border-top: 8px #b7a3e7 solid;
+    background-color: #e1e1e1;
+    border-top: 12px #c2b9ff solid;
     z-index: 5;
     position: relative;
 }
 .footer-left{
+    padding: 30px;
     float: left;
     width: 33%;
     z-index: 4;
 }
 .footer-meddle{
+    padding: 30px;
     float: left;
     width: 33%;
     z-index: 5;
 }
 .footer-right{
+    padding: 30px;
     float: left;
     width: 33%;
     z-index: 4;
@@ -159,8 +162,9 @@ a, a:visited, a:hover, a:active{
 .powered{
     font-size:70%; 
     color:#424242;
-    float: right; 
-    padding-top: 65px;
-    margin-right: 10px;
+    background-color: #c2b9ff;
+    float:right;
+    text-align: right;
+    width: 100%;
     z-index: 4;
 }

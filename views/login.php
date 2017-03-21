@@ -5,7 +5,7 @@
                 <h1 class='panel-title'><strong>ENTRE COM SUA CONTA</strong></h1>
             </div>
             <div class="panel-body" id="panel-login">
-                <form method="POST" class="login" action="/kronoscontabil/login/logar">
+                <form method="POST" class="login" action="/login/logar">
                     <div class="input-group">
                         <input type="email" class="form-control" 
                                placeholder="Digite seu Email" name="email"
@@ -33,7 +33,7 @@
                             </div>
                             <div class="panel-body" id="panel-login">
 
-                                <form method="POST" action="/kronoscontabil/login/trocaSenha">
+                                <form method="POST" action="/login/trocaSenha">
                                     <div class="input-group">
                                         <input class="form-control" type="email" name="email" placeholder="Digite seu email" required>
                                     </div>
@@ -41,7 +41,7 @@
                                     <div id="actions" class="row" >
                                         <div class="col-md-12 text-meddle">
                                             <input type="submit" class="btn btn-primary" value="Enviar">
-                                            <a href="/kronoscontabil/login" class="btn btn-danger">Cancelar</a>
+                                            <a href="/login" class="btn btn-danger">Cancelar</a>
                                         </div>
                                     </div>
                                 </form>
