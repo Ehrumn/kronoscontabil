@@ -2,15 +2,12 @@
 
 class clientesController extends controller {
 
-    public function __construct() {
-        parent::__construct();
-    }
-
     public function index() {
         $dados = array();
 
         $this->loadTemplate('clientes', $dados);
     }
+    
 
     public function salvar() {
         $c = new Clientes();
@@ -34,6 +31,20 @@ class clientesController extends controller {
         $c->setAtivo($_POST['ativo']);
 
         $c->salvar($_POST['id']);
+    }
+    
+    public function loadClientes(){
+        
+    }
+    
+    public function preencheUF(){
+        $dados = array();
+        
+        $c = new Clientes();
+        
+        $dados = $c->selecionaUF();
+        
+        return $dados;
     }
 
 }

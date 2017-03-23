@@ -269,5 +269,48 @@ class Clientes extends model {
         $sql = "DELETE FROM clientes where id = '$this->id'";
         $this->db->query($sql);
     }
+    
+    public function selecionaUF(){
+        $dados = array();
+        $sql = "SELECT sigla FROM estados ORDER BY sigla";
+        $sql = $this->db->query($sql);
+        
+        if ($sql->rowCount() > 0) {
+            $dados = $sql->fecthAll();
+        }
+        print_r($dados);
+        
+        return $dados;
+    }
+    
+    public function carregaCliente($i){
+        if (!empty($i)) {
+            $sql = "select * from usuarios where id = ?";
+            $sql = $this->db->prepare($sql);
+            $sql->execute(array($i));
+
+            if ($sql->rowCount() > 0) {
+                $data = $sql->fetch();
+                $this->id = $data['id'];
+                $this->nome = $data['nome'];
+                $this->cpf = $data['cpf'];
+                $this->cnpj = $data['cnpj'];
+                $this->email = $data['email'];
+                $this->endereco = $data['endereco'];
+                $this->numero = $data['numero'];
+                $this->complemento = $data['complemento'];
+                $this->bairro = $data['bairro'];
+                $this->cidade = $data['cidade'];
+                $this->uf = $data['uf'];
+                $this->cel = $data['cel'];
+                $this->fone1 = $data['fone1'];
+                $this->fone2 = $data['fone2'];
+                $this->responsavel = $data['responsavel'];
+                $this->tem_honorario = $data['tem_honorario'];
+                $this->val_honorario = $data['val_honorario'];
+                $this->ativo = $data['ativo'];
+            }
+        }
+    }
 
 }
