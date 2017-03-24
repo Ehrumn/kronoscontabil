@@ -16,11 +16,12 @@ class cidadeEstado extends model {
     
     public function getCidades($uf){
         $array= array();
-        $sql = "SELECT cidade FROM cidade_estado WHERE uf = '$uf'";
+        $sql = "SELECT cidade FROM cidades WHERE uf = '$uf' ORDER BY cidade";
         $sql = $this->db->query($sql);
         if ($sql->rowCount() > 0) {
-            $array = $sql->fetchAll();
+           $array['cidades'] = $sql->fetchAll();
         }
+        
         return $array;
     }
 

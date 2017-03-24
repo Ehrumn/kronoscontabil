@@ -73,8 +73,8 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cidade">Cidade</label>
-                    <Select class="btn btn-primary form-control" id="cidade" name="cidade" value='PR'>
-                        <option class="cidades">CURITIBA</option>
+                    <Select class="btn btn-primary form-control" id="cidade">
+                        <option class="cities">CURITIBA</option>
                     </select>
                 </div>
             </div> 

@@ -2,14 +2,14 @@ function carregaUF() {
     $.ajax({
         url: '/ajax/listauf',
         dataType: 'json',
-        
+
         success: function (json) {
-            
+
             resetUF();
-            
+
             if (json.uf.length > 0) {
                 for (var i in json.uf) {
-                    $('#uf').append("<option class='estados' value = "+ json.uf[i].uf +">" + json.uf[i].uf + "</option>");
+                    $('#uf').append("<option class='estados' value = " + json.uf[i].uf + ">" + json.uf[i].uf + "</option>");
                 }
             }
         },
@@ -20,31 +20,33 @@ function carregaUF() {
 function resetUF() {
     $('.estados').remove();
 }
+
 function resetCidades() {
-    $('.cidades').remove();
+    $('.cities').remove();
 }
 
-
-function carregaCidades(obj){
+function carregaCidades(obj) {
     var uf = $(obj);
-    var urlstr = '/ajax/listaCidades/'+uf.val();
+    var urlstr = '/ajax/listaCidades/' + uf.val();
     
     $.ajax({
         url: urlstr,
         dataType: 'json',
-        
         success: function (json) {
-            
+
             resetCidades();
             
+            $('#cidade').append("<option class='cities' value = '0'>Selecione a cidade</option>");
             if (json.cidades.length > 0) {
                 for (var i in json.cidades) {
-                    $('#cidade').append("<option class='cidades' value = "+ json.cidades[i].cidade +">" + json.cidades[i].cidade + "</option>");
+                    $('#cidade').append("<option class='cities' value = " + json.cidades[i].cidade + ">" + json.cidades[i].cidade + "</option>");
                 }
             }
         },
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function (xhr, er) {
+            alert(xhr);
         }
     });
-    
+
 }
+
