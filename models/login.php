@@ -10,19 +10,17 @@ class Login extends model {
         $totRec = $sql->fetchColumn();
 
         if ($totRec == 0) {
-            $valid = 'N';
-            echo "<script>alert('Email e/ou senha incorretos!')</script>";
-            $this->loginError($email);
+            echo "<script>alert('Email e/ou senha incorretos!')</script>"; 
+            return false;
         } else {
             if ($this->validaBloqueio($email) == 'N') {
                 $this->zeraErro($email);
-                $valid = 'S';
+                return true;
             } else {
-                $valid = 'N';
                 echo "<script>alert('Sua senha foi bloqueada!')</script>";
+                return false;
             }
         }
-        return $valid;
     }
 
     public function usrLogin($email, $senha) {
@@ -51,6 +49,7 @@ class Login extends model {
             $sql = "select qtd_erros, trocar_senha FROM usuarios WHERE email = '$email'";
             $sql = $this->db->query($sql);
             $array = $sql->fetchAll();
+            
             foreach ($array as $value) {
                 $erros = $value['qtd_erros'];
                 $trocasenha = $value['trocar_senha'];
