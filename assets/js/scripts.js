@@ -6,7 +6,7 @@ function carregaUF() {
         success: function (json) {
 
             resetUF();
-
+            $('#uf').append("<option class='estados' value = '0'>Selecione o estado</option>");
             if (json.uf.length > 0) {
                 for (var i in json.uf) {
                     $('#uf').append("<option class='estados' value = " + json.uf[i].uf + ">" + json.uf[i].uf + "</option>");

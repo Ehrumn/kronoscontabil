@@ -19,7 +19,7 @@ class cidadeEstado extends model {
         $sql = "SELECT cidade FROM cidades WHERE uf = '$uf' ORDER BY cidade";
         $sql = $this->db->query($sql);
         if ($sql->rowCount() > 0) {
-           $array['cidades'] = $sql->fetchAll();
+           $array = $sql->fetchAll();
         }
         
         return $array;

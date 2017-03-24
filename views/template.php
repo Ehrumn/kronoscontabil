@@ -8,6 +8,7 @@
         <script type="text/javascript" src="assets/js/scripts.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+        <meta HTTP-EQUIV="Pragma" CONTENT="no cache">
     </head>
     <body class="master-all" id="bodyTemplate" onload="carregaUF()">
         <div class="container-fluid">
