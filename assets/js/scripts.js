@@ -44,7 +44,7 @@ function carregaCidades(obj) {
             }
         },
         error: function (xhr, er) {
-            alert(xhr);
+            //alert(xhr);
         }
     });
 }
