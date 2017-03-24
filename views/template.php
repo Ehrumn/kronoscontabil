@@ -8,10 +8,8 @@
         <script type="text/javascript" src="assets/js/scripts.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        
-
     </head>
-    <body class="master-all">
+    <body class="master-all" onload="carregaUF()">
         <div class="container-fluid">
             <img src="assets/images/icone_1000x1000.png" class="back-img">
             <div class="top">

@@ -33,18 +33,5 @@ class clientesController extends controller {
         $c->salvar($_POST['id']);
     }
     
-    public function loadClientes(){
-        
-    }
-    
-    public function preencheUF(){
-        $dados = array();
-        
-        $c = new Clientes();
-        
-        $dados = $c->selecionaUF();
-        
-        return $dados;
-    }
 
 }

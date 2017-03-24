@@ -68,8 +68,7 @@
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
                     <Select class="btn btn-primary form-control" id="uf" value='PR'>
-                        <option>PR</option>
-                        <option>SC</option>
+                        <option class="estados">PR</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-3">
@@ -100,7 +99,7 @@
         <div id="actions" class="row">
             <div class="col-sm-12 text-right">
                 <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="#" class="btn btn-danger">Cancelar</a>
+                <a href="/sisadm" class="btn btn-danger">Cancelar</a>
             </div>
         </div>
     </form>

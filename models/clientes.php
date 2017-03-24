@@ -21,9 +21,9 @@ class Clientes extends model {
     private $val_honorario;
     private $ativo;
 
-    public function __construct($i) {
+    public function __construct() {
         parent::__construct();
-
+        $i;
         if (!empty($i)) {
             $sql = "select * from usuarios where id = ?";
             $sql = $this->db->prepare($sql);
@@ -41,7 +41,7 @@ class Clientes extends model {
                 $this->complemento = $data['complemento'];
                 $this->bairro = $data['bairro'];
                 $this->cidade = $data['cidade'];
-                $this->uf = $data['uf'];
+                //$this->uf = $data['uf'];
                 $this->cel = $data['cel'];
                 $this->fone1 = $data['fone1'];
                 $this->fone2 = $data['fone2'];
@@ -269,20 +269,7 @@ class Clientes extends model {
         $sql = "DELETE FROM clientes where id = '$this->id'";
         $this->db->query($sql);
     }
-    
-    public function selecionaUF(){
-        $dados = array();
-        $sql = "SELECT sigla FROM estados ORDER BY sigla";
-        $sql = $this->db->query($sql);
         
-        if ($sql->rowCount() > 0) {
-            $dados = $sql->fecthAll();
-        }
-        print_r($dados);
-        
-        return $dados;
-    }
-    
     public function carregaCliente($i){
         if (!empty($i)) {
             $sql = "select * from usuarios where id = ?";
