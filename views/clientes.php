@@ -35,11 +35,11 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cnpj" id="lbl-cnpj">CNPJ</label>
-                    <input class="form-control" id="inp-cnpj" type="text" name="cnpj">
+                    <input class="form-control" id="inp-cnpj" type="text" name="cnpj" onkeyup="maskIt(this,event,'##.###.###/####-##')">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cpf" id="lbl-cpf" >CPF</label>
-                    <input class="form-control" id="inp-cpf" type="text" name="cpf" >
+                    <input class="form-control" id="inp-cpf" type="text" name="cpf" onkeyup="maskIt(this,event,'###.###.###-##')">
                 </div>
             </div>
             <br>
@@ -47,7 +47,7 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-2">
                     <label for="cpf" id="lbl-cep">CEP</label>
-                    <input class="form-control" id="inp-cep" type="text" name="cep">
+                    <input class="form-control" id="inp-cep" type="text" name="cep" onkeyup="maskIt(this,event,'##.###-###')">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
@@ -81,15 +81,15 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-3">
                     <label for="cel">Celular</label>
-                    <input type="text" class="form-control" id="cel">
+                    <input type="text" class="form-control" id="cel" onkeyup="maskIt(this,event,'(##) ####-#####')">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="fone1">Fone Principal</label>
-                    <input type="text" class="form-control" id="fone1">
+                    <input type="text" class="form-control" id="fone1" onkeyup="maskIt(this,event,'(##) ####-#####')">
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="fone2">Fone Opicional</label>
-                    <input type="text" class="form-control" id="fone2">
+                    <label for="fone2">Fone Opcional</label>
+                    <input type="text" class="form-control" id="fone2" onkeyup="maskIt(this,event,'(##) ####-#####')">
                 </div>  
             </div> 
         </div>

@@ -25,12 +25,15 @@ function resetCidades() {
     $('.cities').remove();
 }
 
-function IsEmail(email){
-    var exclude=/[^@-.w]|^[_@.-]|[._-]{2}|[@.]{2}|(@)[^@]*1/;
-    var check=/@[w-]+./;
-    var checkend=/.[a-zA-Z]{2,3}$/;
-    if(((email.search(exclude) != -1)||(email.search(check)) == -1)||(email.search(checkend) == -1)){return false;}
-    else {return true;}
+function IsEmail(email) {
+    var exclude = /[^@-.w]|^[_@.-]|[._-]{2}|[@.]{2}|(@)[^@]*1/;
+    var check = /@[w-]+./;
+    var checkend = /.[a-zA-Z]{2,3}$/;
+    if (((email.search(exclude) != -1) || (email.search(check)) == -1) || (email.search(checkend) == -1)) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 function carregaCidades(obj) {
@@ -57,15 +60,15 @@ function carregaCidades(obj) {
     });
 }
 
-function alteraPessoa(obj){
+function alteraPessoa(obj) {
     var pessoa = $(obj).val();
-    
-    if (pessoa == 'PESSOA FÍSICA'){
+
+    if (pessoa == 'PESSOA FÍSICA') {
         document.getElementById('lbl-cnpj').style.display = 'none';
         document.getElementById('inp-cnpj').style.display = 'none';
         document.getElementById('inp-cpf').style.display = 'inline';
         document.getElementById('lbl-cpf').style.display = 'inline';
-    }else {        
+    } else {
         document.getElementById('lbl-cnpj').style.display = 'inline';
         document.getElementById('inp-cnpj').style.display = 'inline';
         document.getElementById('lbl-cpf').style.display = 'none';
@@ -73,3 +76,68 @@ function alteraPessoa(obj){
     }
 }
 
+// Mascara Input ---------------------------------------------------- (Fernando 24/03/17 - fer.oliveira88@gmail.com)
+function maskIt(w, e, m, r, a) {
+
+// Cancela se o evento for Backspace
+
+    if (!e)
+        var e = window.event
+
+    if (e.keyCode)
+        code = e.keyCode;
+
+    else if (e.which)
+        code = e.which;
+
+// Variáveis da função
+
+    var txt = (!r) ? w.value.replace(/[^\d]+/gi, '') : w.value.replace(/[^\d]+/gi, '').reverse();
+
+    var mask = (!r) ? m : m.reverse();
+
+    var pre = (a) ? a.pre : "";
+
+    var pos = (a) ? a.pos : "";
+
+    var ret = "";
+
+
+    if (code == 9 || code == 8 || txt.length == mask.replace(/[^#]+/g, '').length)
+        return false;
+
+// Loop na máscara para aplicar os caracteres
+
+    for (var x = 0, y = 0, z = mask.length; x < z && y < txt.length; ) {
+
+        if (mask.charAt(x) != '#') {
+
+            ret += mask.charAt(x);
+            x++;
+
+        } else {
+
+            ret += txt.charAt(y);
+            y++;
+            x++;
+
+        }
+
+    }
+
+// Retorno da função
+
+    ret = (!r) ? ret : ret.reverse()
+
+    w.value = pre + ret + pos;
+
+}
+
+// Novo método para o objeto 'String'
+
+String.prototype.reverse = function () {
+
+    return this.split('').reverse().join('');
+
+};
+//Fim Mascara Input-------------------------------------
