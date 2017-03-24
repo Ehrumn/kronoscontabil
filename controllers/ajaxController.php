@@ -8,7 +8,6 @@ class ajaxController extends controller {
 
     public function listauf() {
         $dados = array();
-
         $c = new cidadeEstado();
         $dados['uf'] = $c->getUF();
 

@@ -2,10 +2,6 @@
 
 class cidadeEstado extends model {
 
-    public function __construct() {
-        parent::__construct();
-    }
-
     public function getUF() {
         $array = array();
 
