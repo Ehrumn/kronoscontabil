@@ -29,9 +29,6 @@ class clientesController extends controller {
         $c->setTemHonorario($_POST['tem_honorario']);
         $c->setValHonorario($_POST['val_honorario']);
         $c->setAtivo($_POST['ativo']);
-
         $c->salvar($_POST['id']);
     }
-    
-
 }
