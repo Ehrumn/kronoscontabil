@@ -13,12 +13,12 @@ class ajaxController extends controller {
 
         echo json_encode($dados);
     }
+    
     public function listaCidades($uf) {
         $dados = array();
         
         $c = new cidadeEstado();
         $dados['cidades'] = $c->getCidades($uf);
-
         echo json_encode($dados);
     }
 
