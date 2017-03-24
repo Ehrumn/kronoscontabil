@@ -19,7 +19,7 @@
                     <label for="ativo">Ativo?</label>                    
                     <Select class="btn btn-primary form-control" id="ativo">
                         <option>S</option>
-                        <option>N</option>
+                        <option class="btn-danger">N</option>
                     </select>
                 </div>
             </div>
@@ -28,19 +28,18 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-2">
                     <label for="tipoPessoa">Tipo Pessoa</label>
-                    <select class="btn btn-primary form-control" id="tipoPessoa">
-                        <option>Pessoa Física</option>
-                        <option>Pessoa Jurídica</option>
+                    <select class="btn btn-primary form-control" id="tipoPessoa" onchange="alteraPessoa(this)">                        
+                        <option>PESSOA JURÍDICA</option>
+                        <option>PESSOA FÍSICA</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="cpf">CPF</label>
-                    <input class="form-control" type="text" name="cnpj" onKeyPress="MascaraCNPJ(clientes.cnpj);" 
-                           maxlength="18" onBlur="ValidarCNPJ(clientes.cnpj);">
+                    <label for="cnpj" id="lbl-cnpj">CNPJ</label>
+                    <input class="form-control" id="inp-cnpj" type="text" name="cnpj">
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="cnpj">CNPJ</label>
-                    <input type="text" class="form-control" id="cnpj">
+                    <label for="cpf" id="lbl-cpf">CPF</label>
+                    <input class="form-control" id="inp-cpf" type="text" name="cpf">
                 </div>
             </div>
             <br>

@@ -21,7 +21,7 @@ class cidadeEstado extends model {
         if ($sql->rowCount() > 0) {
            $array = $sql->fetchAll();
         }
-        
+        print_r($array);
         return $array;
     }
 

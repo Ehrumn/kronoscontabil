@@ -28,14 +28,14 @@ function resetCidades() {
 function carregaCidades(obj) {
     var uf = $(obj);
     var urlstr = '/ajax/listaCidades/' + uf.val();
-    
+
     $.ajax({
         url: urlstr,
         dataType: 'json',
         success: function (json) {
 
             resetCidades();
-            
+
             $('#cidade').append("<option class='cities' value = '0'>Selecione a cidade</option>");
             if (json.cidades.length > 0) {
                 for (var i in json.cidades) {
@@ -47,6 +47,21 @@ function carregaCidades(obj) {
             alert(xhr);
         }
     });
+}
 
+function alteraPessoa(obj){
+    var pessoa = $(obj).val();
+    
+    if (pessoa == 'PESSOA FÍSICA'){
+        document.getElementById('lbl-cnpj').style.display = 'none';
+        document.getElementById('inp-cnpj').style.display = 'none';
+        document.getElementById('inp-cpf').style.display = 'inline';
+        document.getElementById('lbl-cpf').style.display = 'inline';
+    }else {        
+        document.getElementById('lbl-cnpj').style.display = 'inline';
+        document.getElementById('inp-cnpj').style.display = 'inline';
+        document.getElementById('lbl-cpf').style.display = 'none';
+        document.getElementById('inp-cpf').style.display = 'none';
+    }
 }
 
