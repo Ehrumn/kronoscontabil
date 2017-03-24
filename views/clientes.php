@@ -67,15 +67,14 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <Select class="btn btn-primary form-control" id="uf" value='PR'>
+                    <Select class="btn btn-primary form-control" id="uf" value='PR' onchange="carregaCidades(this)">
                         <option class="estados">PR</option>
                     </select>
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cidade">Cidade</label>
                     <Select class="btn btn-primary form-control" id="cidade" name="cidade" value='PR'>
-                        <option>CURITIBA</option>
-                        <option>SÃO JOSÉ DOS PINHAIS</option>
+                        <option class="cidades">CURITIBA</option>
                     </select>
                 </div>
             </div> 
