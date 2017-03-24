@@ -45,6 +45,21 @@
             <br>
             <!--linha03-->
             <div class="form-group col-sm-12">
+                <div class="form-group col-sm-2">
+                    <label for="cpf" id="lbl-cep">CEP</label>
+                    <input class="form-control" id="inp-cep" type="text" name="cep">
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="uf">Estado</label>
+                    <select class="btn btn-primary form-control" id="uf" onchange="carregaCidades(this)"></select>
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="cidade">Cidade</label>
+                    <Select class="btn btn-primary form-control" id="cidade"></select>
+                </div>
+            </div> 
+            <!--linha04-->
+            <div class="form-group col-sm-12">
                 <div class="form-group col-sm-5">
                     <label for="endereco">Endereço</label>
                     <input type="text" class="form-control" id="endereco">
@@ -61,17 +76,6 @@
                     <label for="bairro">Bairro</label>
                     <input type="text" class="form-control" id="bairro">
                 </div>  
-            </div> 
-            <!--linha04-->
-            <div class="form-group col-sm-12">
-                <div class="form-group col-sm-3">
-                    <label for="uf">Estado</label>
-                    <select class="btn btn-primary form-control" id="uf" onchange="carregaCidades(this)"></select>
-                </div>
-                <div class="form-group col-sm-3">
-                    <label for="cidade">Cidade</label>
-                    <Select class="btn btn-primary form-control" id="cidade"></select>
-                </div>
             </div> 
             <!--linha05 contatos-->
             <div class="form-group col-sm-12">
