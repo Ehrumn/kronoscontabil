@@ -38,8 +38,8 @@
                     <input class="form-control" id="inp-cnpj" type="text" name="cnpj">
                 </div>
                 <div class="form-group col-sm-3">
-                    <label for="cpf" id="lbl-cpf">CPF</label>
-                    <input class="form-control" id="inp-cpf" type="text" name="cpf">
+                    <label for="cpf" id="lbl-cpf" >CPF</label>
+                    <input class="form-control" id="inp-cpf" type="text" name="cpf" >
                 </div>
             </div>
             <br>
