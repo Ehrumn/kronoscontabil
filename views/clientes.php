@@ -67,13 +67,11 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <Select class="btn btn-primary form-control" id="uf" value='PR' onchange="carregaCidades(this)">
-                    </select>
+                    <select class="btn btn-primary form-control" id="uf" onchange="carregaCidades(this)"></select>
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cidade">Cidade</label>
-                    <Select class="btn btn-primary form-control" id="cidade">
-                    </select>
+                    <Select class="btn btn-primary form-control" id="cidade"></select>
                 </div>
             </div> 
             <!--linha05 contatos-->
