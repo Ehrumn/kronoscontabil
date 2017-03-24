@@ -28,7 +28,7 @@ class loginController extends controller {
                 $_SESSION['usrName'] = $value['nome'];
                 $_SESSION['usrEmail'] = $value['email'];
                 $_SESSION['usrTipo'] = $value['tipo'];               
-                $l->zeraErro($email);
+                
                 if ($value['tipo'] == 'ADMIN') {
                     echo "<script>window.location.href='/sisadm'</script>";
                 } else {
