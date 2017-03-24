@@ -22,11 +22,13 @@ class loginController extends controller {
 
         $l = new Login();
         $valid = $l->validaLogin($email, $senha);
-        if ($valid == 'S') {
+        
+        if ($valid) {
             foreach ($l->usrLogin($email, $senha) as $value) {
                 $_SESSION['usrName'] = $value['nome'];
                 $_SESSION['usrEmail'] = $value['email'];
-                $_SESSION['usrTipo'] = $value['tipo'];
+                $_SESSION['usrTipo'] = $value['tipo'];               
+                $l->zeraErro($email);
                 if ($value['tipo'] == 'ADMIN') {
                     echo "<script>window.location.href='/sisadm'</script>";
                 } else {
@@ -34,6 +36,7 @@ class loginController extends controller {
                 }
             }
         } else {
+            $l->loginError($email);
             echo "<script>window.location.href='/login'</script>";
         }
     }
