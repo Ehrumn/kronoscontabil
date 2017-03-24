@@ -1,7 +1,7 @@
 <?php
 
 class ajaxController extends controller {
-    
+
     public function index() {
         echo 'index';
     }
@@ -11,7 +11,7 @@ class ajaxController extends controller {
 
         $c = new cidadeEstado();
         $dados['uf'] = $c->getUF();
-                
+
         echo json_encode($dados);
     }
 
