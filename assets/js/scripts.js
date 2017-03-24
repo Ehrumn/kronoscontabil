@@ -1,14 +1,15 @@
-function carregaUF(){
+function carregaUF() {
     $.ajax({
-        url: 'ajax/getUF',
+        url: '/ajax/listauf',
         dataType: 'json',
         success: function (json) {
-
+            
             resetUF();
-
+            var sel = document.getElementById("uf");
+            
             if (json.uf.length > 0) {
-                for(var i in json.uf){
-                    $('#uf').append("<option class='estados'>"+json.uf[i].sigla+"</option>");
+                for (var i in json.uf) {
+                    $('#uf').innerHTML = "<option class='estados'>" + json.uf[i].sigla + "</option>";
                 }
             }
         },
@@ -16,7 +17,6 @@ function carregaUF(){
         }
     });
 }
-
 function resetUF() {
     $('.estados').remove();
 }
