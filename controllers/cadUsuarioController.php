@@ -22,11 +22,11 @@ class cadUsuarioController extends controller {
             echo "<script>window.history.go(-1);</script>";
             exit;
         } else if (empty($_POST['senha'])) {
-            echo "<script>alert('Preencha o Senha!');</script>";
+            echo "<script>alert('Preencha a Senha!');</script>";
             echo "<script>window.history.go(-1);</script>";
             exit;
         } else if (empty($_POST['conf_senha'])) {
-            echo "<script>alert('Preencha o Confimação da Senha!');</script>";
+            echo "<script>alert('Preencha a Confimação da Senha!');</script>";
             echo "<script>window.history.go(-1);</script>";
             exit;
         } else if (empty($tipo)) {
