@@ -8,6 +8,7 @@ class ajaxController extends controller {
 
     public function listauf() {
         $dados = array();
+        
         $c = new cidadeEstado();
         $dados['uf'] = $c->getUF();
 
@@ -19,6 +20,7 @@ class ajaxController extends controller {
         
         $c = new cidadeEstado();
         $dados['cidades'] = $c->getCidades($uf);
+        
         echo json_encode($dados);
     }
 
