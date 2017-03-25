@@ -1,11 +1,12 @@
 function carregaUF() {
     $.ajax({
-        url: '/ajax/listauf',
+        url: '/ajax/listaUF',
         dataType: 'json',
 
         success: function (json) {
 
             resetUF();
+            
             $('#uf').append("<option class='estados' value = '0'>Selecione o estado</option>");
             if (json.uf.length > 0) {
                 for (var i in json.uf) {
@@ -14,6 +15,7 @@ function carregaUF() {
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
+            alert('erro');
         }
     });
 }

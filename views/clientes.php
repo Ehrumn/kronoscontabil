@@ -7,7 +7,7 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-5">
                     <label for="nome">Nome / Razão Social</label>
-                    <input type="text" class="form-control" id="nome">
+                    <input type="text" class="form-control" id="nome" required>
                 </div>
 
                 <div class="form-group col-sm-5">
@@ -36,27 +36,31 @@
                 </div>
                 <div class="form-group col-sm-3" id="cnpj" style="display:none;">
                     <label for="cnpj" id="lbl-cnpj">CNPJ</label>
-                    <input class="form-control" id="inp-cnpj" type="text" name="cnpj" onkeyup="maskIt(this,event,'##.###.###/####-##')">
+                    <input class="form-control" id="inp-cnpj" type="text" name="cnpj" onkeyup="maskIt(this, event, '##.###.###/####-##')">
                 </div>
                 <div class="form-group col-sm-3" id="cpf" style="display:none;">
                     <label for="cpf" id="lbl-cpf" >CPF</label>
-                    <input class="form-control" id="inp-cpf" type="text" name="cpf" onkeyup="maskIt(this,event,'###.###.###-##')">
+                    <input class="form-control" id="inp-cpf" type="text" name="cpf" onkeyup="maskIt(this, event, '###.###.###-##')">
                 </div>
             </div>
             <br>
             <!--linha03-->
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-2">
-                    <label for="cpf" id="lbl-cep">CEP</label>
-                    <input class="form-control" id="inp-cep" type="text" name="cep" onkeyup="maskIt(this,event,'##.###-###')">
+                    <label for="cep" id="lbl-cep">CEP</label>
+                    <input class="form-control" id="inp-cep" type="text" name="cep" onkeyup="maskIt(this, event, '##.###-###')">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <select class="btn btn-primary form-control" id="uf" onchange="carregaCidades(this)"></select>
+                    <select class="btn-primary form-control" id="uf" onchange="carregaCidades(this)" onclick="carregaUF()">
+                        <option class='estados' value = '0'>Selecione o estado</option>
+                    </select>
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cidade">Cidade</label>
-                    <Select class="btn btn-primary form-control" id="cidade"></select>
+                    <Select class="btn-primary form-control" id="cidade">
+                        <option class='cities' value = '0'>Selecione a cidade</option>
+                    </select>
                 </div>
             </div> 
             <!--linha04-->
@@ -82,15 +86,15 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-3">
                     <label for="cel">Celular</label>
-                    <input type="text" class="form-control" id="cel" onkeyup="maskIt(this,event,'(##) ####-#####')">
+                    <input type="text" class="form-control" id="cel" onkeyup="maskIt(this, event, '(##) ####-#####')">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="fone1">Fone Principal</label>
-                    <input type="text" class="form-control" id="fone1" onkeyup="maskIt(this,event,'(##) ####-#####')">
+                    <input type="text" class="form-control" id="fone1" onkeyup="maskIt(this, event, '(##) ####-#####')">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="fone2">Fone Opcional</label>
-                    <input type="text" class="form-control" id="fone2" onkeyup="maskIt(this,event,'(##) ####-#####')">
+                    <input type="text" class="form-control" id="fone2" onkeyup="maskIt(this, event, '(##) ####-#####')">
                 </div>  
             </div> 
         </div>
