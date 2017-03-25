@@ -28,16 +28,17 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-2">
                     <label for="tipoPessoa">Tipo Pessoa</label>
-                    <select class="btn btn-primary form-control" id="tipoPessoa" onchange="alteraPessoa(this)">                        
-                        <option>PESSOA JURÍDICA</option>
+                    <select class="btn btn-primary form-control" id="tipoPessoa" onchange="alteraPessoa(this)" required>      
+                        <option></option>
                         <option>PESSOA FÍSICA</option>
+                        <option>PESSOA JURÍDICA</option>    
                     </select>
                 </div>
-                <div class="form-group col-sm-3">
+                <div class="form-group col-sm-3" id="cpf" style="display:none;">
                     <label for="cnpj" id="lbl-cnpj">CNPJ</label>
                     <input class="form-control" id="inp-cnpj" type="text" name="cnpj" onkeyup="maskIt(this,event,'##.###.###/####-##')">
                 </div>
-                <div class="form-group col-sm-3">
+                <div class="form-group col-sm-3" id="cnpj" style="display:none;">
                     <label for="cpf" id="lbl-cpf" >CPF</label>
                     <input class="form-control" id="inp-cpf" type="text" name="cpf" onkeyup="maskIt(this,event,'###.###.###-##')">
                 </div>

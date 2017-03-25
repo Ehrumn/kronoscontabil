@@ -64,15 +64,14 @@ function alteraPessoa(obj) {
     var pessoa = $(obj).val();
 
     if (pessoa == 'PESSOA FÍSICA') {
-        document.getElementById('lbl-cnpj').style.display = 'none';
-        document.getElementById('inp-cnpj').style.display = 'none';
-        document.getElementById('inp-cpf').style.display = 'inline';
-        document.getElementById('lbl-cpf').style.display = 'inline';
-    } else {
-        document.getElementById('lbl-cnpj').style.display = 'inline';
-        document.getElementById('inp-cnpj').style.display = 'inline';
-        document.getElementById('lbl-cpf').style.display = 'none';
-        document.getElementById('inp-cpf').style.display = 'none';
+        document.getElementById('cnpj').style.display = 'inline';
+        document.getElementById('cpf').style.display = 'none';
+    } else if (pessoa == 'PESSOA JURÍDICA'){
+        document.getElementById('cnpj').style.display = 'none';
+        document.getElementById('cpf').style.display = 'inline';
+    }else {
+        document.getElementById('cnpj').style.display = 'none';
+        document.getElementById('cpf').style.display = 'none';
     }
 }
 
