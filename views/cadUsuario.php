@@ -14,11 +14,11 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="campo3">Senha</label>
-                <input type="text" class="form-control" name="senha">
+                <input type="password" class="form-control" name="senha">
             </div>
             <div class="form-group col-md-2">
                 <label for="campo4">Confirmar Senha</label>
-                <input type="text" class="form-control" name="conf_senha">
+                <input type="password" class="form-control" name="conf_senha">
             </div>
             <div class="form-group col-md-2">
                 <label for="campo5">Tipo de Usuario</label>
