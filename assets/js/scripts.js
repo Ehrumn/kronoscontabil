@@ -152,10 +152,12 @@ function carregaDadosCEP(cep) {
         url: strUrl,
         dataType: 'json',
         success: function (json) {
+            resetCidades()
+            resetUF()
             document.getElementById('endereco').value = json.logradouro;
             document.getElementById('bairro').value = json.bairro;
-            document.getElementById('cidade').style.value = json.localidade;
-            document.getElementById('uf').value = json.uf;
+            $('#uf').append("<option class='estados' value = '0'>"+json.uf+"</option>");
+            $('#cidade').append("<option class='cities' value = '0'>"+json.localidade+"</option>");
         },
         error: function (xhr, er) {
         }

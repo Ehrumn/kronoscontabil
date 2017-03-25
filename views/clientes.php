@@ -7,12 +7,12 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-5">
                     <label for="nome">Nome / Razão Social</label>
-                    <input type="text" class="form-control" id="nome" required>
+                    <input type="text" class="form-control text-uppercase" id="nome" required>
                 </div>
 
                 <div class="form-group col-sm-5">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control " id="email" required>
+                    <input type="email" class="form-control text-lowercase" id="email" required>
                 </div>
 
                 <div class="form-group col-sm-1">
@@ -52,11 +52,13 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <input class="form-control" id="inp-estado" type="text" name="estado">
+                    <select class="btn-primary form-control text-uppercase" id="uf" >
+                        <option class='estados' value = '0'>Selecione o estado</option>
+                    </select>
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cidade">Cidade</label>
-                    <Select class="btn-primary form-control" id="cidade">
+                    <Select class="btn-primary form-control text-uppercase" id="cidade">
                         <option class='cities' value = '0'>Selecione a cidade</option>
                     </select>
                 </div>
@@ -65,7 +67,7 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-5">
                     <label for="endereco">Endereço</label>
-                    <input type="text" class="form-control" id="endereco">
+                    <input type="text" class="form-control text-uppercase" id="endereco">
                 </div>
                 <div class="form-group col-sm-1">
                     <label for="numero">Número</label>
@@ -73,11 +75,11 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="complemento">Complemento</label>
-                    <input type="text" class="form-control" id="complemento">
+                    <input type="text" class="form-control text-uppercase" id="complemento">
                 </div>  
                 <div class="form-group col-sm-3">
                     <label for="bairro">Bairro</label>
-                    <input type="text" class="form-control" id="bairro">
+                    <input type="text" class="form-control text-uppercase" id="bairro">
                 </div>  
             </div> 
             <!--linha05 contatos-->
