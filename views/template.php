@@ -10,7 +10,7 @@
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
         <meta HTTP-EQUIV="Pragma" CONTENT="no cache">
     </head>
-    <body class="master-all" id="bodyTemplate" onload="carregaUF()">
+    <body class="master-all" id="bodyTemplate">
         <div class="container-fluid">
             <img src="assets/images/icone_1000x1000.png" class="back-img">
             <div class="top">

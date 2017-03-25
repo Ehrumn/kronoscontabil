@@ -6,11 +6,12 @@ class ajaxController extends controller {
         echo 'index';
     }
 
-    public function listauf() {
+    public function listaUF() {
         $dados = array();
+        
         $c = new cidadeEstado();
         $dados['uf'] = $c->getUF();
-
+        
         echo json_encode($dados);
     }
     
@@ -19,6 +20,7 @@ class ajaxController extends controller {
         
         $c = new cidadeEstado();
         $dados['cidades'] = $c->getCidades($uf);
+        
         echo json_encode($dados);
     }
 
