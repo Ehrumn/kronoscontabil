@@ -52,9 +52,7 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <select class="btn-primary form-control" id="uf" onchange="carregaCidades(this)" onclick="carregaUF()">
-                        <option class='estados' value = '0'>Selecione o estado</option>
-                    </select>
+                    <input class="form-control" id="inp-estado" type="text" name="estado">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="cidade">Cidade</label>
