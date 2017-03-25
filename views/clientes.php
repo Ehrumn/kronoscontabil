@@ -48,7 +48,7 @@
             <div class="form-group col-sm-12">
                 <div class="form-group col-sm-2">
                     <label for="cep" id="lbl-cep">CEP</label>
-                    <input class="form-control" id="inp-cep" type="text" name="cep" onkeyup="maskIt(this, event, '##.###-###')">
+                    <input class="form-control" id="inp-cep" type="text" name="cep" onkeyup="maskIt(this, event, '##.###-###')" onblur="carregaDadosCEP(this.value)">
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>

@@ -6,7 +6,7 @@ function carregaUF() {
         success: function (json) {
 
             resetUF();
-            
+
             $('#uf').append("<option class='estados' value = '0'>Selecione o estado</option>");
             if (json.uf.length > 0) {
                 for (var i in json.uf) {
@@ -68,10 +68,10 @@ function alteraPessoa(obj) {
     if (pessoa == 'PESSOA FÍSICA') {
         document.getElementById('cpf').style.display = 'inline';
         document.getElementById('cnpj').style.display = 'none';
-    } else if (pessoa == 'PESSOA JURÍDICA'){
+    } else if (pessoa == 'PESSOA JURÍDICA') {
         document.getElementById('cnpj').style.display = 'inline';
         document.getElementById('cpf').style.display = 'none';
-    }else {
+    } else {
         document.getElementById('cnpj').style.display = 'none';
         document.getElementById('cpf').style.display = 'none';
     }
@@ -142,3 +142,22 @@ String.prototype.reverse = function () {
 
 };
 //Fim Mascara Input-------------------------------------
+
+
+function carregaDadosCEP(cep) {
+    cep = cep.replace(/\.|\-/g, '');
+    var strUrl = 'https://viacep.com.br/ws/' + cep + '/json/';
+    $.ajax({
+
+        url: strUrl,
+        dataType: 'json',
+        success: function (json) {
+            document.getElementById('endereco').value = json.logradouro;
+            document.getElementById('bairro').value = json.bairro;
+            document.getElementById('cidade').style.value = json.localidade;
+            document.getElementById('uf').value = json.uf;
+        },
+        error: function (xhr, er) {
+        }
+    });
+}
