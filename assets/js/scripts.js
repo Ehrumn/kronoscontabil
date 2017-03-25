@@ -64,11 +64,11 @@ function alteraPessoa(obj) {
     var pessoa = $(obj).val();
 
     if (pessoa == 'PESSOA FÍSICA') {
+        document.getElementById('cpf').style.display = 'inline';
+        document.getElementById('cnpj').style.display = 'none';
+    } else if (pessoa == 'PESSOA JURÍDICA'){
         document.getElementById('cnpj').style.display = 'inline';
         document.getElementById('cpf').style.display = 'none';
-    } else if (pessoa == 'PESSOA JURÍDICA'){
-        document.getElementById('cnpj').style.display = 'none';
-        document.getElementById('cpf').style.display = 'inline';
     }else {
         document.getElementById('cnpj').style.display = 'none';
         document.getElementById('cpf').style.display = 'none';

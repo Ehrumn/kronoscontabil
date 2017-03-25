@@ -12,7 +12,7 @@
 
                 <div class="form-group col-sm-5">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control " id="email">
+                    <input type="email" class="form-control " id="email" required>
                 </div>
 
                 <div class="form-group col-sm-1">
@@ -34,11 +34,11 @@
                         <option>PESSOA JURÍDICA</option>    
                     </select>
                 </div>
-                <div class="form-group col-sm-3" id="cpf" style="display:none;">
+                <div class="form-group col-sm-3" id="cnpj" style="display:none;">
                     <label for="cnpj" id="lbl-cnpj">CNPJ</label>
                     <input class="form-control" id="inp-cnpj" type="text" name="cnpj" onkeyup="maskIt(this,event,'##.###.###/####-##')">
                 </div>
-                <div class="form-group col-sm-3" id="cnpj" style="display:none;">
+                <div class="form-group col-sm-3" id="cpf" style="display:none;">
                     <label for="cpf" id="lbl-cpf" >CPF</label>
                     <input class="form-control" id="inp-cpf" type="text" name="cpf" onkeyup="maskIt(this,event,'###.###.###-##')">
                 </div>
