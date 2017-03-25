@@ -9,8 +9,7 @@ class cadUsuario extends model {
         $tipo = $array['tipo'];
 
         $sql = "INSERT INTO usuarios SET nome = '$nome' , email = '$email', senha = '$senha', tipo = '$tipo', qtd_erros = 0, trocar_senha = 'N' ";
-        //$this->db->query($sql);       
-        echo "<script>alert('cadastrado');</script>";
+        $this->db->query($sql);       
     }
 
     public function checkEmail($email) {

@@ -36,7 +36,7 @@ class cadUsuarioController extends controller {
         } else if ($senha_1 == $conf_senha) {
             $senha = $senha_1;
         } else {
-            echo "<script>alert('Senha não confere!');</script>";
+            echo "<script>alert('Senhas não conferem!');</script>";
             echo "<script>window.history.go(-1);</script>";
             exit;
         }
@@ -45,8 +45,11 @@ class cadUsuarioController extends controller {
         $checkemail = $cadastrar->checkEmail($email);
         if ($checkemail) {
             $cadastrar->salvarUsuario($array);
+            echo "<script>alert('Cadastro efetuado com sucesso!');</script>";
+            echo "<script>window.location.href='/login';</script>";
+            exit;
         } else {
-            echo "<script>alert('Email Cadastrado!');</script>";
+            echo "<script>alert('Email já cadastrado, tente novamente!');</script>";
             echo "<script>window.history.go(-1);</script>";
             exit;
         }
