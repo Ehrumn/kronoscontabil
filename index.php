@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'config.php';
+echo '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
 
 spl_autoload_register(function ($class) {
     if (strpos($class, 'Controller') > -1) {
