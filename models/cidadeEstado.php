@@ -13,17 +13,19 @@ class cidadeEstado extends model {
 
         return $array;
     }
-    
-    public function getCidades($uf){
-        $array= array();
-        $sql = "SELECT a.nome as cidade "
-                . "FROM cidades a, estados b "
-                . "WHERE b.uf = '$uf' AND b.cod_estados = a.cod_estados "
-                . "GROUP BY a.nome ORDER BY a.nome";
+
+    public function getCidades($uf) {
+        $array = array();
+        $sql = "select a.nome as cidade " .
+                "FROM cidades a, estados b " .
+                "WHERE b.uf = '$uf' and b.cod_estados=a.cod_estados " .
+                "GROUP BY a.nome ORDER BY a.nome";
         $sql = $this->db->query($sql);
         if ($sql->rowCount() > 0) {
-           $array = $sql->fetchAll();
+            $array = $sql->fetchAll();
         }
+        
+        print_r($array);
         return $array;
     }
 
