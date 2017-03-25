@@ -5,7 +5,7 @@ class cidadeEstado extends model {
     public function getUF() {
         $array = array();
 
-        $sql = "SELECT sigla as uf FROM estados GROUP BY sigla";
+        $sql = "SELECT uf FROM estados GROUP BY uf order by uf";
         $sql = $this->db->query($sql);
         if ($sql->rowCount() > 0) {
             $array = $sql->fetchAll();
@@ -16,7 +16,10 @@ class cidadeEstado extends model {
     
     public function getCidades($uf){
         $array= array();
-        $sql = "SELECT cidade FROM cidades WHERE uf = '$uf' ORDER BY cidade";
+        $sql = "SELECT a.nome as cidade "
+                . "FROM cidades a, estados b "
+                . "WHERE b.uf = '$uf' AND b.cod_estados = a.cod_estados "
+                . "GROUP BY a.nome ORDER BY a.nome";
         $sql = $this->db->query($sql);
         if ($sql->rowCount() > 0) {
            $array = $sql->fetchAll();
