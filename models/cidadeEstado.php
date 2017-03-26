@@ -3,22 +3,23 @@
 class cidadeEstado extends model {
 
     public function getUF() {
-        $sql = "SELECT uf, nome FROM estados ORDER BY uf";
+        $sql = "SELECT estado, uf FROM cidades_estados GROUP BY estado, uf ORDER BY estado, uf";
         $sql = $this->db->query($sql);
         
         if ($sql->rowCount() > 0) {
-            $array = $sql->fetchAll();
+            foreach ($sql->fetchAll() as $key => $value) {
+                $array[] = array(
+                    'estado' => $value['estado'],
+                    'uf' => $value['uf'],
+                );
+            }
         }
-        
         return $array;
     }
 
     public function getCidades($uf) {
         $array = array();
-        $sql = "select a.nome as cidade " .
-                "FROM cidades a, estados b " .
-                "WHERE b.uf = '$uf' and b.cod_estados=a.cod_estados " .
-                "GROUP BY a.nome ORDER BY a.nome";
+        $sql = "SELECT cidade FROM cidades_estados WHERE uf = '$uf' ORDER BY cidade";
         $sql = $this->db->query($sql);
         if ($sql->rowCount() > 0) {
             $array = $sql->fetchAll();

@@ -144,21 +144,19 @@ function carregaDadosCEP(cep) {
     });
 }
 function carregaUF() {
-   $.ajax({
-        async: false,
+    $.ajax({
         url: '/ajax/listaUF',
+        cache: false,
         dataType: 'json',
-        contentType: "charset=utf-8",
-        sucess: function (estados) {
-            resetUF();
-            alert('foi');
-            for (var i in estados.uf) {
-
+        success: function (json) {
+            for (var i in json.cidade) {
+                $('#uf').append("<option class='estados' value = '" + json.uf[i].uf + "'>" + json.uf[i].uf + "</option>");
             }
         },
         error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status);
             alert(thrownError);
         }
     });
-    
+
 }

@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <select class="btn-primary form-control text-uppercase" id="uf" >
+                    <select class="btn-primary form-control text-uppercase" id="uf" onclick="carregaUF()">
                         <option class='estados' value = '0'>Selecione o estado</option>
                     </select>
                 </div>

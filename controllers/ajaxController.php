@@ -22,7 +22,7 @@ class ajaxController extends controller {
         $c = new cidadeEstado();
         $dados['cidades'] = $c->getCidades($uf);
         
-        echo json_encode($dados);
+        echo json_encode($dados, JSON_UNESCAPED_UNICODE);
     }
 
 
