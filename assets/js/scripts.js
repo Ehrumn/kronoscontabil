@@ -1,24 +1,4 @@
-function carregaUF() {
-    $.ajax({
-        url: '/ajax/listaUF',
-        dataType: 'json',
 
-        success: function (json) {
-
-            resetUF();
-
-            $('#uf').append("<option class='estados' value = '0'>Selecione o estado</option>");
-            if (json.uf.length > 0) {
-                for (var i in json.uf) {
-                    $('#uf').append("<option class='estados' value = " + json.uf[i].uf + ">" + json.uf[i].uf + "</option>");
-                }
-            }
-        },
-        error: function (jqXHR, textStatus, errorThrown) {
-            alert('erro');
-        }
-    });
-}
 function resetUF() {
     $('.estados').remove();
 }
@@ -152,14 +132,33 @@ function carregaDadosCEP(cep) {
         url: strUrl,
         dataType: 'json',
         success: function (json) {
-            resetCidades()
-            resetUF()
+            resetCidades();
+            resetUF();
             document.getElementById('endereco').value = json.logradouro;
             document.getElementById('bairro').value = json.bairro;
-            $('#uf').append("<option class='estados' value = '0'>"+json.uf+"</option>");
-            $('#cidade').append("<option class='cities' value = '0'>"+json.localidade+"</option>");
+            $('#uf').append("<option class='estados' value = '0'>" + json.uf + "</option>");
+            $('#cidade').append("<option class='cities' value = '0'>" + json.localidade + "</option>");
         },
         error: function (xhr, er) {
         }
     });
+}
+function carregaUF() {
+   $.ajax({
+        async: false,
+        url: '/ajax/listaUF',
+        dataType: 'json',
+        contentType: "charset=utf-8",
+        sucess: function (estados) {
+            resetUF();
+            alert('foi');
+            for (var i in estados.uf) {
+
+            }
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(thrownError);
+        }
+    });
+    
 }
