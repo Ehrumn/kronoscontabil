@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">KRONOS</a>
+                <a class="navbar-brand" href="login">KRONOS</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -18,7 +18,7 @@
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">CADASTROS <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Sócios</a></li>
-                            <li><a href="#">Clientes</a></li>
+                            <li><a href="clientes">Clientes</a></li>
                             <li><a href="#">Fornecedores</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Links Úteis</a></li>
@@ -39,11 +39,11 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><?=$_SESSION['usrName'];?><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Usuários dos Sistema</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Saír</a></li>
+                            <li><a href="/login/logoff">Saír</a></li>
                         </ul>
                     </li>
                 </ul>

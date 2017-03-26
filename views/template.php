@@ -37,9 +37,11 @@
                     </div>
                 </div>
             </div>
+            <?php if(isset($_SESSION['usrName']) && !empty($_SESSION['usrName'])) {?>
             <nav class="nav">
                <?php $this->loadViewInTemplate('Menus', $viewData); ?>
             </nav>
+            <?php }?>
             <div clas="mid">
                 <div class="row">
                     <div class="form-group col-md-12">
