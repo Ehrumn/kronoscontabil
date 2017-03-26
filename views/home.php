@@ -15,7 +15,7 @@
             <div class="meddle-all">
                 <div class="cabecalho"> 
                     <div class="cab-logo">
-                        <img class="img-logo" src="assets/images/logo_1000x258.png" height="120px">
+                        <img class="img-logo" src="assets/images/logo_1000x258.png">
                     </div>
                     <div class="cab-login">
                         <a href="login"><button class="btn btn-primary btn-sm">Acessar Sistema</button></a>

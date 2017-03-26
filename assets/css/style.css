@@ -45,6 +45,7 @@ body{
 }
 .img-logo{
     float: left;
+    width: 80%;
 }
 .back-img{
     opacity: 0.3;
