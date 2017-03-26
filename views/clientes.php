@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <select class="btn-primary form-control text-uppercase" id="uf" onchange="carregaCidades(this)" onclick="carregaUF()">
+                    <select class="btn-primary form-control text-uppercase" id="uf" >
                         <option class='estados' value = '0'>Selecione o estado</option>
                     </select>
                 </div>
@@ -102,7 +102,7 @@
         <div id="actions" class="row">
             <div class="col-sm-12 text-right">
                 <button type="submit" class="btn btn-primary">Salvar</button>
-                <a href="/sisadm" class="btn btn-danger">Cancelar</a>
+                <a href="javascript:window.history.go(-1);" class="btn btn-danger">Cancelar</a>
             </div>
         </div>
     </form>
