@@ -12,10 +12,10 @@ class model {
             echo "Conexão Falhou: " . $e->getMessage();
         }
 
-        /*$this->db->query("SET NAMES 'utf8'");
+        $this->db->query("SET NAMES 'utf8'");
         $this->db->query('SET character_set_connection=utf8');
         $this->db->query('SET character_set_client=utf8');
-        $this->db->query('SET character_set_results=utf8');*/
+        $this->db->query('SET character_set_results=utf8');
     }
 
 }
