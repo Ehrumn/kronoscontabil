@@ -18,10 +18,9 @@ function IsEmail(email) {
     }
 }
 
-function carregaCidades(obj) {
-    var uf = $(obj);
-    var urlstr = '/ajax/listaCidades/' + uf.val();
-
+function carregaCidades(uf) {
+    var urlstr = '/ajax/listaCidades/' +uf;
+    
     $.ajax({
         url: urlstr,
         dataType: 'json',
@@ -46,10 +45,10 @@ function alteraPessoa(obj) {
     var pessoa = $(obj).val();
 
     if (pessoa == 'PESSOA FÍSICA') {
-        document.getElementById('cpf').style.display = 'inline';
+        document.getElementById('cpf').style.display = 'block';
         document.getElementById('cnpj').style.display = 'none';
     } else if (pessoa == 'PESSOA JURÍDICA') {
-        document.getElementById('cnpj').style.display = 'inline';
+        document.getElementById('cnpj').style.display = 'block';
         document.getElementById('cpf').style.display = 'none';
     } else {
         document.getElementById('cnpj').style.display = 'none';
@@ -121,7 +120,7 @@ String.prototype.reverse = function () {
     return this.split('').reverse().join('');
 
 };
-//Fim Mascara Input-------------------------------------
+// Fim Mascara Input-------------------------------------
 
 
 function carregaDadosCEP(cep) {
@@ -134,10 +133,17 @@ function carregaDadosCEP(cep) {
         success: function (json) {
             resetCidades();
             resetUF();
+            $.ajax({
+                url: '/ajax/getEstado/'+json.uf,
+                dataType: 'json',
+                success: function (est){
+                     $('#uf').append("<option class='estados' value = '"+json.uf+"'>" + est.estado + "</option>");
+                }
+            });
             document.getElementById('endereco').value = json.logradouro;
             document.getElementById('bairro').value = json.bairro;
-            $('#uf').append("<option class='estados' value = '0'>" + json.uf + "</option>");
-            $('#cidade').append("<option class='cities' value = '0'>" + json.localidade + "</option>");
+           
+            $('#cidade').append("<option class='cities' value = '"+ json.localidade+"'>" + json.localidade + "</option>");
         },
         error: function (xhr, er) {
         }
@@ -149,13 +155,13 @@ function carregaUF() {
         cache: false,
         dataType: 'json',
         success: function (json) {
-            for (var i in json.cidade) {
-                $('#uf').append("<option class='estados' value = '" + json.uf[i].uf + "'>" + json.uf[i].uf + "</option>");
+            resetUF();
+            $('#uf').append("<option class='estados' value = ''>SELECIONE O ESTADO</option>");
+            for (var i in json.uf) {
+                $('#uf').append("<option class='estados' value = '" + json.uf[i].uf + "'>" + json.uf[i].estado + "</option>");
             }
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            alert(xhr.status);
-            alert(thrownError);
         }
     });
 

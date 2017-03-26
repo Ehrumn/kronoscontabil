@@ -1,7 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html  lang="pt-br">
     <head>
         <title>KRONOS</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Contabilidade, empresas, Impostos, IR">
+        <meta name="author" content="Rafael Caetano Dresch e Fernando Benthien de Oliveira">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link type="text/css" rel="stylesheet" href="assets/css/template.css"/>
         <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
@@ -10,10 +13,10 @@
         <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
         <meta HTTP-EQUIV="Pragma" CONTENT="no cache">
     </head>
-    <body class="master-all" id="bodyTemplate">
+    <body class="master-all" id="bodyTemplate" onload="carregaUF()">
         <div class="container-fluid">
             <img src="assets/images/icone_1000x1000.png" class="back-img">
-            <div class="top">
+            <div class="">
                 <div class="row">
                     <div class="form-group col-md-3">
                         <img src="assets/images/logo_1000x258.png" class="img-responsive"> 

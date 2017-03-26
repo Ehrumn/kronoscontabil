@@ -16,6 +16,16 @@ class ajaxController extends controller {
         echo json_encode($estados, JSON_UNESCAPED_UNICODE);
     }
     
+    public function getEstado($uf){
+        $estado = array();
+        
+        $c = new cidadeEstado();
+        
+        $estado = $c->getEstado($uf);
+        
+        echo json_encode($estado, JSON_UNESCAPED_UNICODE);
+    }
+    
     public function listaCidades($uf) {
         $dados = array();
         

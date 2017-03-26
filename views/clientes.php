@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container-fluid" >
     <h3 class="text-center bg-primary">CADASTRO DE CLIENTES</h3>
-    <form action="index.html" neme="clientes">
+    <form action="index.html" neme="clientes" >
         <!-- area de campos do form -->
         <div class="row">
             <!--linha01-->
@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="uf">Estado</label>
-                    <select class="btn-primary form-control text-uppercase" id="uf" onclick="carregaUF()">
+                    <select class="btn-primary form-control text-uppercase" id="uf" onchange="carregaCidades(this.value)">
                         <option class='estados' value = '0'>Selecione o estado</option>
                     </select>
                 </div>
