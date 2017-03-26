@@ -10,7 +10,7 @@
     <body> 
         <div class="body_all">
             <div class="left-all">
-                <center><img src="/assets/img/fb.png" width="32px"></center>
+               <?php include 'noticias.php';?>
             </div>
             <div class="meddle-all">
                 <div class="cabecalho"> 
@@ -24,7 +24,7 @@
                 </div>
                 <div><img src="assets/images/icone_1000x1000.png" class="back-img"></div>
                 <div class="middle">
-                    
+
                     <br><br><br><br><br><br><br><br><center><h1>Site em Desenvolvimento</h1></center>
                 </div>
             </div>
