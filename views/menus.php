@@ -43,7 +43,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="#">Usuários dos Sistema</a></li>
                             <li class="divider"></li>
-                            <li><a href="/login/logoff">Saír</a></li>
+                            <li><a href="/login/logout">Saír</a></li>
                         </ul>
                     </li>
                 </ul>

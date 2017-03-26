@@ -32,7 +32,7 @@
                             ?>
                         </div>
                         <div class="form-group col-md-2 ">
-                            <a href="/login/logoff" style="text-decoration: none; color:#FFF;"><button  class="btn btn-primary btn-sm" style="margin: 10px auto;">Logout</button></a> 
+                            <a href="/login/logout" style="text-decoration: none; color:#FFF;"><button  class="btn btn-primary btn-sm" style="margin: 10px auto;">Logout</button></a> 
                         <?php } ?> 
                     </div>
                 </div>

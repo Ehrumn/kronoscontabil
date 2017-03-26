@@ -41,7 +41,7 @@ class loginController extends controller {
         }
     }
 
-    public function logoff() {
+    public function logout() {
         session_destroy();
         header("Location: ../");
     }
