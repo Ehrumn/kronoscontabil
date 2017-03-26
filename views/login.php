@@ -4,7 +4,7 @@
             <div class="panel-heading">
                 <h1 class='panel-title'><strong>ENTRE COM SUA CONTA</strong></h1>
             </div>
-            <div class="panel-body" id="panel-login">
+            <div class="panel-body" id="panel-login" >
                 <form method="POST" class="login" action="/login/logar">
                     <div class="input-group">
                         <input type="email" class="form-control" 
