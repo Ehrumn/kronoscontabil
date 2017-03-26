@@ -1,7 +1,7 @@
 <?php
 $xml = simplexml_load_file('http://www.contabeis.com.br/rss/noticias/');
 ?>
-<div style="width: 100%; color: #ECECEC; text-align: center; background-color: #337ab7; margin-top: -20px; margin-bottom: -15px;"><h3>Notícias</h3></div>
+<div style="width: 100%; color: #ECECEC; text-align: center; background-color: #337ab7; margin-top: -15px; margin-bottom: -15px; padding:10px;"><h3>Notícias</h3></div>
 <hr style="border: 1px #337ab7 solid;">
 <?php
 for ($n = 0; $n <= 5; $n++) {
