@@ -19,7 +19,7 @@
                     <label for="ativo">Ativo?</label>                    
                     <Select class="btn btn-primary form-control" id="ativo">
                         <option>S</option>
-                        <option class="btn-danger">N</option>
+                        <option>N</option>
                     </select>
                 </div>
             </div>

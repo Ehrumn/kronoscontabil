@@ -3,12 +3,13 @@
 class cidadeEstado extends model {
 
     public function getUF() {
-        $sql = "SELECT uf FROM estados ORDER BY uf";
+        $sql = "SELECT uf, nome FROM estados ORDER BY uf";
         $sql = $this->db->query($sql);
+        
         if ($sql->rowCount() > 0) {
             $array = $sql->fetchAll();
         }
-
+        
         return $array;
     }
 

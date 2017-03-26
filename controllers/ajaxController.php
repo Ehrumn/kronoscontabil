@@ -7,12 +7,13 @@ class ajaxController extends controller {
     }
 
     public function listaUF() {
-        $dados = array();
+        $estados = array();
         
         $c = new cidadeEstado();
-        $dados['uf'] = $c->getUF();
+        $estados['uf'] = $c->getUF();
+        //print_r($estados);
         
-        echo json_encode($dados);
+        echo json_encode($estados, JSON_UNESCAPED_UNICODE);
     }
     
     public function listaCidades($uf) {

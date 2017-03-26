@@ -6,12 +6,12 @@ class model {
 
     public function __construct() {
         global $config;
-        $this->db = new PDO("mysql:dbname=" . $config['dbname'] . ";host=" . $config['host'], $config['dbuser'], $config['dbpass']);
+        $this->db = new PDO("mysql:dbname=" . $config['dbname'] . ";host=" . $config['host'], $config['dbuser'], $config['dbpass'], array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"
+        ));
         
-        $this->db->query("SET NAMES 'utf8'");
-        $this->db->query('SET character_set_connection=utf8');
-        $this->db->query('SET character_set_client=utf8');
-        $this->db->query('SET character_set_results=utf8');
+        //$this->db = new PDO("mysql:dbname=" . $config['dbname'] . ";host=" . $config['host'], $config['dbuser'], $config['dbpass']);
     }
 
 }
