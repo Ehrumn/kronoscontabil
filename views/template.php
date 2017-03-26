@@ -13,7 +13,7 @@
     <body class="master-all" id="bodyTemplate">
         <div class="container-fluid">
             <img src="assets/images/icone_1000x1000.png" class="back-img">
-            <div class="top">
+            <div class="">
                 <div class="row">
                     <div class="form-group col-md-3">
                         <img src="assets/images/logo_1000x258.png" class="img-responsive"> 
