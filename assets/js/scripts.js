@@ -19,8 +19,8 @@ function IsEmail(email) {
 }
 
 function carregaCidades(uf) {
-    var urlstr = '/ajax/listaCidades/' +uf;
-    
+    var urlstr = '/ajax/listaCidades/' + uf;
+
     $.ajax({
         url: urlstr,
         dataType: 'json',
@@ -134,16 +134,16 @@ function carregaDadosCEP(cep) {
             resetCidades();
             resetUF();
             $.ajax({
-                url: '/ajax/getEstado/'+json.uf,
+                url: '/ajax/getEstado/' + json.uf,
                 dataType: 'json',
-                success: function (est){
-                     $('#uf').append("<option class='estados' value = '"+json.uf+"'>" + est.estado + "</option>");
+                success: function (est) {
+                    $('#uf').append("<option class='estados' value = '" + json.uf + "'>" + est.estado + "</option>");
                 }
             });
             document.getElementById('endereco').value = json.logradouro;
             document.getElementById('bairro').value = json.bairro;
-           
-            $('#cidade').append("<option class='cities' value = '"+ json.localidade+"'>" + json.localidade + "</option>");
+
+            $('#cidade').append("<option class='cities' value = '" + json.localidade + "'>" + json.localidade + "</option>");
         },
         error: function (xhr, er) {
         }
@@ -165,4 +165,23 @@ function carregaUF() {
         }
     });
 
+}
+
+function carregaClientes() {
+    $.ajax({
+        url: 'listaClientes/listarClientes',
+        cache: false,
+        dataType: 'json',
+        success: function (json) {
+            for (var i in json.clientes) {
+                $('#corpo-tabela').append("<tr><td>" + json.clientes[i].id + "</td><td>" + json.clientes[i].nome + 
+                        "</td><td>" + json.clientes[i].email + "</td><td>" + json.clientes[i].cnpj + 
+                        "</td><td>" + json.clientes[i].cpf + "</td><td>" + json.clientes[i].cel + "</td><td>"+json.clientes[i].fone1+
+                        "</td><td>"+json.clientes[i].fone2+"</td><td>"+json.clientes[i].endereco+"</td><td>"+json.clientes[i].numero+
+                        "</td><td>"+json.clientes[i].complemento+"</td><td>"+json.clientes[i].bairro+"</td><td>"+json.clientes[i].cidade+
+                        "</td><td>"+json.clientes[i].uf+"</td><td>"+json.clientes[i].responsavel+"</td><td>"+json.clientes[i].tem_honorario+
+                        "</td><td>"+json.clientes[i].val_honorario+"</td><td>"+json.clientes[i].ativo+"</td></tr>");
+            }
+        }
+    });
 }

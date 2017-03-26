@@ -1,4 +1,5 @@
 <div class="container-fluid" >
+    <script>carregaUF()</script>
     <h3 class="text-center bg-primary">CADASTRO DE CLIENTES</h3>
     <form action="index.html" neme="clientes" >
         <!-- area de campos do form -->

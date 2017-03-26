@@ -299,5 +299,41 @@ class Clientes extends model {
             }
         }
     }
+    
+    
+    function listaClientes(){
+        $sql = "SELECT * FROM clientes";
+        
+        $sql = $this->db->query($sql);
+        
+        if ($sql->rowCount() > 0) {
+           /* foreach ($sql->fetchAll() as $key => $value) {
+                $array[] = array(
+                    'id' => $value['id'],
+                    'nome' => $value['nome'],
+                    'cpf' => $value['cpf'],
+                    'cnpj' => $value['cnpj'],
+                    'email' => $value['email'],
+                    'endereco' => $value['endereco'],
+                    'numero' => $value['numero'],
+                    'complemento' => $value['complemento'],
+                    'bairro' => $value['bairro'],
+                    'cidade' => $value['cidade'],
+                    'uf' => $value['uf'],
+                    'cel' => $value['cel'],
+                    'fone1' => $value['fone1'],
+                    'fone2' => $value['fone2'],
+                    'responsavel' => $value['responsavel'],
+                    'tem_honorario' => $value['tem_honorario'],
+                    'val_honorario' => $value['val_honorario'],
+                    'ativo' => $value['ativo']                    
+                );
+            }*/
+            
+            $array = $sql->fetchAll();
+            print_r($array);
+        }
+        return $array;
+    }
 
 }
