@@ -27,7 +27,7 @@ body{
     z-index: 4;
     max-height: 690px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow: auto;
 }
 .meddle-all{
     float: left;
