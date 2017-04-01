@@ -31,17 +31,23 @@
                             <a href="/login/logout" style="text-decoration: none; color:#FFF;"><button  class="btn btn-primary btn-sm" style="margin: 10px auto;">Logout</button></a>
                         </div>
                     <?php } ?> 
-                    </div>
                 </div>
-                <?php if (isset($_SESSION['usrName']) && !empty($_SESSION['usrName'])) { ?>
-                    <nav class="nav">
-                        <?php $this->loadViewInTemplate('Menus', $viewData); ?>
-                    </nav>
-                <?php } ?>
-                <div clas="mid">
-                    <div class="row">
-                        <div class="form-group col-md-12">
-                            <?php $this->loadViewInTemplate($viewName, $viewData); ?>
+            </div>
+            <?php if (isset($_SESSION['usrName']) && !empty($_SESSION['usrName'])) { ?>
+                <nav class="nav">
+                    <?php
+                    if ($_SESSION['usrTipo'] == 'ADMIN') {
+                        $this->loadViewInTemplate('menus', $viewData);
+                    }else{
+                        $this->loadViewInTemplate('menusCliente', $viewData);
+                    }
+                    ?>
+                </nav>
+            <?php } ?>
+            <div clas="mid">
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <?php $this->loadViewInTemplate($viewName, $viewData); ?>
                     </div>
                 </div>
             </div>

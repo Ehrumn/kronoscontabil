@@ -175,12 +175,8 @@ function carregaClientes() {
         success: function (json) {
             for (var i in json.clientes) {
                 $('#corpo-tabela').append("<tr><td>" + json.clientes[i].id + "</td><td>" + json.clientes[i].nome + 
-                        "</td><td>" + json.clientes[i].email + "</td><td>" + json.clientes[i].cnpj + 
-                        "</td><td>" + json.clientes[i].cpf + "</td><td>" + json.clientes[i].cel + "</td><td>"+json.clientes[i].fone1+
-                        "</td><td>"+json.clientes[i].fone2+"</td><td>"+json.clientes[i].endereco+"</td><td>"+json.clientes[i].numero+
-                        "</td><td>"+json.clientes[i].complemento+"</td><td>"+json.clientes[i].bairro+"</td><td>"+json.clientes[i].cidade+
-                        "</td><td>"+json.clientes[i].uf+"</td><td>"+json.clientes[i].responsavel+"</td><td>"+json.clientes[i].tem_honorario+
-                        "</td><td>"+json.clientes[i].val_honorario+"</td><td>"+json.clientes[i].ativo+"</td></tr>");
+                        "</td><td>" + json.clientes[i].email + "</td><td>"+json.clientes[i].tem_honorario+
+                        "</td><td>"+json.clientes[i].val_honorario+"</td></tr>");
             }
         }
     });
