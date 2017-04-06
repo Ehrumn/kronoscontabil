@@ -22,7 +22,7 @@
                         </form>
                     </div>
                 </div>
-                <div><img src="assets/images/icone_1000x1000.png" class="back-img"></div>
+                <div style="position: fixed;"><img src="assets/images/icone_1000x1000.png" class="back-img"></div>
                 <div class="middle">
                     <br><br><br><br><br><br><br><br><center><h1>Site em Desenvolvimento</h1></center>
                 </div>
