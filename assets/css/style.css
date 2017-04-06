@@ -24,8 +24,9 @@ body{
 .left-all{
     float: left;
     width: 20%;
+    height: 100%;
     z-index: 4;
-    max-height: 690px;
+    max-height: 670px;
     overflow-x: hidden;
     overflow: auto;
     direction: rtl;
@@ -45,9 +46,12 @@ body{
 .right-all{
     float: left;
     width: 20%;
+    height: 100%;
     max-height: 670px;
     overflow: auto;
+    overflow-x: hidden;
     z-index: 4;
+    border-left: 1px #337ab7 solid;
 }
 .right-all::-webkit-scrollbar { width:10px; background:#e3e0d6; }
 .right-all::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
@@ -108,6 +112,9 @@ body{
     float: right;
     border: 2px;
     overflow: auto;
+}
+.mid-rig-links{
+    padding-right: 5%;
 }
 .mid-rig-top{
     color: #0066cc;

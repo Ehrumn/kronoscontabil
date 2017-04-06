@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="right-all">
-                <div class="mid-rig-top"><h2>Links Úteis:</h2></div>
+                <div style="width: 100%; color: #ECECEC; text-align: center; background-color: #337ab7; margin-top: -15px; margin-bottom: 0; padding:10px;"><h3>Links Úteis:</h3></div>
                 <div class="mid-rig-links">
                     <?php
                     $links = new Home();
