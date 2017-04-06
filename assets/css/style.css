@@ -28,6 +28,9 @@ body{
     max-height: 690px;
     overflow-x: hidden;
     overflow: auto;
+    direction: rtl;
+    border-right: 1px #337ab7 solid;
+
 }
 .left-all::-webkit-scrollbar { width:10px; background:#e3e0d6; }
 .left-all::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
