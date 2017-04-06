@@ -51,7 +51,7 @@ body{
     max-height: 670px;
     overflow: auto;
     overflow-x: hidden;
-    z-index: 4;
+    z-index: 5;
     border-left: 1px #337ab7 solid;
 }
 .right-all::-webkit-scrollbar { width:10px; background:#e3e0d6; }
@@ -68,7 +68,6 @@ body{
 }
 .back-img{
     opacity: 0.3;
-
     position: fixed;
     z-index: 3;
 
